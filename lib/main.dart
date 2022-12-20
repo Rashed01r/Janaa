@@ -1,5 +1,6 @@
 import 'package:final_project/local/local.dart';
 import 'package:final_project/view/HomePage.dart';
+import 'package:final_project/view/PlacesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,
       translations: MyLocale(),
-      home: HomePage(),
+      home: PlacesPage(),
     );
   }
 }

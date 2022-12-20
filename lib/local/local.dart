@@ -17,12 +17,13 @@ class MyLocale extends Translations {
           "11": "سجل الدخول بواسطة Google",
           "12": "سجل الدخول بواسطة Facebook",
           "13": "الاسم الاول",
-          "14" : "الاسم الاخير",
-          "15" : "اعد ادخال كلمة المرور",
-          "16" : "التسجيل",
-          "17" : "البريد الالكتروني",
-          "18" : "بالنقر على إنشاء حساب ، فإنك توافق على",
-        "19" : "شروط الخدمات وسياسة الخصوصية"
+          "14": "الاسم الاخير",
+          "15": "اعد ادخال كلمة المرور",
+          "16": "التسجيل",
+          "17": "البريد الالكتروني",
+          "18": "بالنقر على إنشاء حساب ، فإنك توافق على",
+          "19": "شروط الخدمات وسياسة الخصوصية",
+          "20": "الأماكن"
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -37,13 +38,14 @@ class MyLocale extends Translations {
           "10": "Sign in With Apple",
           "11": "sign in with Google",
           "12": "Sign in With Facebook",
-            "13": "First Name",
-          "14" : "Last Name",
-          "15" : "Re-enter Password",
-          "16" : "SingUp",
-          "17" : "Email",
-          "18" : "By tapping “ Create Account”, you agree to",
-        "19" : "Terms of Services & Privacy Policy"
+          "13": "First Name",
+          "14": "Last Name",
+          "15": "Re-enter Password",
+          "16": "SingUp",
+          "17": "Email",
+          "18": "By tapping “ Create Account”, you agree to",
+          "19": "Terms of Services & Privacy Policy",
+          "20": "Places"
         }
       };
 }
