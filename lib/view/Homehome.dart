@@ -30,7 +30,10 @@ Container(
   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
   
   child: Image.asset("images/Screenshot 1444-05-25 at 10.22 1.png"),)
-  ,Text("لا تبخل على على ابنك واشتر تذكرة ")
+  ,Center(child: Text("لا تبخل على على ابنك واشتر تذكرة "))
+
+  ,NavigationBar(destinations: [ ],)
+
 
 
 ],)
