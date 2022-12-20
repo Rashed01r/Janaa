@@ -1,3 +1,4 @@
+import 'package:final_project/compenent/ButtomNav.dart';
 import 'package:final_project/compenent/textFiledCoustom.dart';
 import 'package:final_project/controller/loginController.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,9 @@ class LoginPage extends StatelessWidget {
                   var valEmail = _email.currentState!.validate();
                   var valPass = _pass.currentState!.validate();
 
-                  if (valEmail && valPass) {}
+                  if (valEmail && valPass) {
+                    Get.to(ButtomNavBar());
+                  }
                   ;
                 },
                 child: Text(
