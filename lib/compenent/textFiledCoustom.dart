@@ -21,7 +21,6 @@ class TextFiledCustome extends StatelessWidget {
         height: 80,
         child: Form(
           key: formKey,
-          //autovalidateMode: AutovalidateMode.onUserInteraction,
           child: TextFormField(
               validator: (text) {
                 if (text == null || text.isEmpty) {
