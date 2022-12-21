@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
           TextFiledCustome(
             hint: "7".tr,
             formKey: _pass,
-            controller: loginController.emailCon,
+            controller: loginController.passCon,
           ),
           SizedBox(
             height: 25,
