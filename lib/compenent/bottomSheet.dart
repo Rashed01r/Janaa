@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 
 class BottomSheetCustome extends StatelessWidget {
   const BottomSheetCustome({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
