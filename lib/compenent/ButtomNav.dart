@@ -1,3 +1,5 @@
+import 'package:final_project/view/ActivityPage.dart';
+import 'package:final_project/view/FavoritePage.dart';
 import 'package:final_project/view/Homehome.dart';
 import 'package:final_project/view/PlacesPage.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +17,9 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
   int Selctedindex = 0;
   final Screens = [
     Home(),
-    Center(
-      child: Text("Activity"),
-    ),
+    ActivityPage(),
     PlacesPage(),
-    Center(
-      child: Text("Favorite"),
-    ),
+    Favorite(),
     Center(
       child: Text("Profile"),
     ),

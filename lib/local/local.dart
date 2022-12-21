@@ -34,7 +34,13 @@ class MyLocale extends Translations {
           "28":"أطعمة ومشروبات",
           "29":"دور ضيافة",
           "30":"حلاقين",
-          "31":"تنسيق حفلات"
+          "31":"تنسيق حفلات",
+          "32":"الفعاليات",
+          "33":"ابحث عن فعاليات",
+          "34":"المفضلة",
+          "35":"لا يوجد لديك مفضلة حتى الان",
+          "36":"يمكنك التصفح الان وحفظها في مفضلتك",
+           "37":"تصفح الان",
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -57,7 +63,7 @@ class MyLocale extends Translations {
           "18": "By tapping “ Create Account”, you agree to",
           "19": "Terms of Services & Privacy Policy",
           "20": "Places",
-          "21": "Find places",
+          "21": "Search for places",
           "22": "Entertainment and play",
           "23": "Education and creativity",
           "24": "Sports and self-defense",
@@ -68,6 +74,14 @@ class MyLocale extends Translations {
           "29":"Guesthouse",
           "30":"Barbers",
           "31":"Party coordination",
+          "32":"activities",
+          "33":"Search for activities",
+          "34":"Favorite",
+          "35":"You didn't add any thing to your Favorite yet",
+          "36":"you can now",
+          "37":"Discover now",
+
+
         }
       };
 }
