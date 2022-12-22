@@ -1,5 +1,4 @@
 import 'package:final_project/compenent/bottomSheet.dart';
-import 'package:final_project/view/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -45,26 +44,7 @@ class _FavoriteState extends State<Favorite> {
           SizedBox(
             height: 50,
           ),
-          InkWell(
-            onTap: () {
-              Get.to(HomePage());
-            },
-            child: Container(
-              height: 50,
-              width: 200,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: Color(0xff1F61C3)),
-              child: Center(
-                  child: Text(
-                "37".tr,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
-              )),
-            ),
-          )
+          BottomSheetCustome(label: "37".tr),
         ]),
       ]),
     );
