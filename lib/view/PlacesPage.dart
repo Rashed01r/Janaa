@@ -1,6 +1,7 @@
 import 'package:final_project/compenent/ButtomNav.dart';
 import 'package:final_project/compenent/containerPlaces.dart';
 import 'package:final_project/compenent/searchBar.dart';
+import 'package:final_project/view/Eventdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -126,9 +127,9 @@ class PlacesPage extends StatelessWidget {
                     Image.asset("images/Screenshot 1444-05-26 at 10.50 1.png"),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 88),
+                padding: const EdgeInsets.only(top: 95),
                 child: Container(
-                  width: 365,
+                  width: 356,
                   height: 29,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(

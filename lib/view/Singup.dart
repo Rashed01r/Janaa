@@ -1,6 +1,6 @@
 import 'package:final_project/compenent/textFiledCoustom.dart';
 import 'package:final_project/controller/loginController.dart';
-import 'package:final_project/view/HomePage.dart';
+import 'package:final_project/view/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -18,7 +18,7 @@ class SingUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "2".tr,
@@ -85,30 +85,37 @@ class SingUp extends StatelessWidget {
           ),
           SizedBox(height: 15),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 35, ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 35,
+            ),
             child: Container(
               height: 50,
-              
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xff1F61C3)),
               child: TextButton(
                   onPressed: () {
-                    Get.to(HomePage());
+                    Get.to(() => LoginPage());
                   },
                   child: Text(
                     '16'.tr,
                     style: TextStyle(color: Colors.white),
-                    
                   )),
             ),
           ),
           SizedBox(
             height: 20,
           ),
-Center(child: Text("18".tr,style: TextStyle(fontSize: 15),),)
-, Center(child: Text("19".tr,style: TextStyle(fontSize: 15,color: Color(0xffAD557A))),)
-
+          Center(
+            child: Text(
+              "18".tr,
+              style: TextStyle(fontSize: 15),
+            ),
+          ),
+          Center(
+            child: Text("19".tr,
+                style: TextStyle(fontSize: 15, color: Color(0xffAD557A))),
+          )
         ],
       ),
     );

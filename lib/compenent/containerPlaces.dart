@@ -1,3 +1,4 @@
+import 'package:final_project/view/Eventdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -12,15 +13,20 @@ class ContainerPlaces extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Container(
-            height: 149,
-            child: Image.asset("$image"),
+        InkWell(
+          onTap: () {
+           
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: Container(
+              height: 149,
+              child: Image.asset("$image"),
+            ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, top: 120),
+          padding: const EdgeInsets.only(left: 15, top: 120, right: 15),
           child: Container(
             width: 165,
             height: 29,
