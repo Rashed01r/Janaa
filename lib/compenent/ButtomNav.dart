@@ -1,12 +1,10 @@
-import 'package:final_project/compenent/homeComponents/HomeCard1.dart';
-import 'package:final_project/compenent/homeComponents/Homecard2.dart';
+import 'package:final_project/view/ActivityPage.dart';
+import 'package:final_project/view/FavoritePage.dart';
 import 'package:final_project/view/Homehome.dart';
-import 'package:final_project/view/Singup.dart';
+import 'package:final_project/view/PlacesPage.dart';
 import 'package:flutter/material.dart';
-
-import 'package:get/get.dart';
-
-import 'homeComponents/CloseHome.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 class ButtomNavBar extends StatefulWidget {
   const ButtomNavBar({super.key});
@@ -16,20 +14,15 @@ class ButtomNavBar extends StatefulWidget {
 }
 
 class _ButtomNavBarState extends State<ButtomNavBar> {
-  int Selctedindex = 4;
+  int Selctedindex = 0;
   final Screens = [
-    //add your page beleow 
-  
+    Home(),
+    ActivityPage(),
+    PlacesPage(),
+    Favorite(),
     Center(
-      child: Text("78".tr),
+      child: Text("Profile"),
     ),
-    Center(
-      child: Text("80".tr),
-    ),Center(
-      child: Text("79".tr),
-    ),SingUp()
-    
-    , Home(),
   ];
 
   @override
@@ -42,29 +35,31 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
               Selctedindex = index;
             });
           },
-          enableFeedback: false,
           currentIndex: Selctedindex,
-          selectedItemColor: Color(0xff1F61C3),
-          backgroundColor: Color(0xff1F61C3),
+          selectedItemColor: Color(0xffE0B430),
+          backgroundColor: Color(0xffE0B430),
           showSelectedLabels: true,
           showUnselectedLabels: true,
-          unselectedItemColor:Color.fromARGB(162, 0, 0, 0) ,
-          unselectedIconTheme: IconThemeData(size: 25),
+          unselectedIconTheme: IconThemeData(size: 15),
           iconSize: 25,
           elevation: 0,
           items: [
             BottomNavigationBarItem(
-                label: "78".tr, icon: Icon(Icons.account_circle)),
+                label: "Home",
+                icon: SizedBox(
+                    height: 20,
+                    width: 20,
+                    child: Image.asset("images/home 1.png"))),
             BottomNavigationBarItem(
-                label: "80".tr, icon:Icon(Icons.favorite)),
+                label: "Activity", icon: Image.asset("images/puzzle 1.png")),
             BottomNavigationBarItem(
-              label: "79".tr,
-              icon: Icon(Icons.place),
+              label: "Places",
+              icon: Image.asset("images/location 1.png"),
             ),
             BottomNavigationBarItem(
-                label: "77".tr, icon:Icon(Icons.local_activity_rounded,)),
+                label: "Favorite", icon: Image.asset("images/heart 1.png")),
             BottomNavigationBarItem(
-                label: "71".tr, icon: Icon(Icons.home))
+                label: "Profile", icon: Image.asset("images/user 1 (3).png"))
           ]),
     );
   }
