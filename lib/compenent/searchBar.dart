@@ -51,16 +51,15 @@ class SearchBar extends StatelessWidget {
                           ),
                           Row(
                             children: [
+                              InkWell(
+                                  onTap: () {
+                                    Get.back();
+                                  },
+                                  child: Icon(Icons.close)),
                               Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: InkWell(
-                                    onTap: () {
-                                      Get.back();
-                                    },
-                                    child: Icon(Icons.close)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 140),
+                                padding: const EdgeInsets.only(
+                                  right: 140,
+                                ),
                                 child: Text(
                                   "41".tr,
                                   style: TextStyle(
@@ -69,7 +68,7 @@ class SearchBar extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 120),
+                                padding: const EdgeInsets.only(right: 120),
                                 child: Text(
                                   "42".tr,
                                   style: TextStyle(
@@ -82,7 +81,7 @@ class SearchBar extends StatelessWidget {
                             height: 15,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 10),
+                            padding: const EdgeInsets.only(left: 350),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -96,7 +95,7 @@ class SearchBar extends StatelessWidget {
                             height: 20,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 20),
+                            padding: const EdgeInsets.only(right: 20),
                             child: Row(
                               children: [
                                 ContainerFliter(
@@ -123,7 +122,7 @@ class SearchBar extends StatelessWidget {
                             height: 20,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 10),
+                            padding: const EdgeInsets.only(right: 15),
                             child: Row(
                               children: [
                                 ContainerFliter(
@@ -160,7 +159,7 @@ class SearchBar extends StatelessWidget {
                             height: 15,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 10),
+                            padding: const EdgeInsets.only(left: 300),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -206,7 +205,7 @@ class SearchBar extends StatelessWidget {
                             height: 15,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 10),
+                            padding: const EdgeInsets.only(left: 300),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -239,11 +238,11 @@ class SearchBar extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 50, top: 10),
+                            padding: const EdgeInsets.only(left: 290, top: 10),
                             child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: ContainerFliter(
-                                    height: 29, label: "6-9", width: 87)),
+                                    height: 29, label: "9-14", width: 87)),
                           ),
                           SizedBox(
                             height: 25,

@@ -4,51 +4,39 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:like_button/like_button.dart';
 import 'package:map_launcher/map_launcher.dart';
 import 'package:share_plus/share_plus.dart';
 
-class EventDetails extends StatelessWidget {
-  EventDetails({
+class Placedetails extends StatelessWidget {
+  Placedetails({
     super.key,
     required this.image,
-    required this.year,
-    required this.month,
-    required this.day,
     required this.nameCompany,
     required this.nameActivity,
     required this.activityDetails,
-    required this.dateActivity,
     required this.timeActivity,
     required this.city,
     required this.locationActivity,
     required this.shareActivity,
-    required this.latitude,
-    required this.longitude,
-    required this.titleLocation,
     required this.phoneNumber,
   });
-  int year;
-  int month;
-  int day;
+
   String image;
   String nameCompany;
   String nameActivity;
   String activityDetails;
-  String dateActivity;
+
   String timeActivity;
   String city;
   String locationActivity;
   String shareActivity;
-  double latitude;
-  double longitude;
-  String titleLocation;
+
   String phoneNumber;
 
   @override
   Widget build(BuildContext context) {
-    DateTime dateTime = DateTime(2023, 1, 1);
-
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -59,7 +47,6 @@ class EventDetails extends StatelessWidget {
                   children: [
                     Image.asset(
                       "$image",
-                      fit: BoxFit.cover,
                     ),
                     Container(
                       height: 50,
@@ -91,17 +78,15 @@ class EventDetails extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 280,
-                  ),
+                Align(
+                  alignment: Alignment.centerRight,
                   child: Text(
                     "$nameActivity",
                     style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
+                Align(
+                  alignment: Alignment.centerRight,
                   child: Text(
                     "$activityDetails",
                     style: TextStyle(fontSize: 15),
@@ -126,60 +111,27 @@ class EventDetails extends StatelessWidget {
                         color: Color(0xffAD557A),
                       ),
                     ),
-                    Column(
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 10, right: 10),
-                              child: Text(
-                                "57".tr,
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 10, right: 10),
-                              child: Text(
-                                "$dateActivity",
-                                style: TextStyle(
-                                    fontSize: 16, color: Color(0x70000000)),
-                              ),
-                            ),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10, right: 10),
+                          child: Text(
+                            "59".tr,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10, right: 10),
+                          child: Text(
+                            "$timeActivity",
+                            style: TextStyle(
+                                fontSize: 16, color: Color(0x70000000)),
+                          ),
                         ),
                       ],
                     ),
                   ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 58, left: 58),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, right: 10),
-                            child: Text(
-                              "59".tr,
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, right: 10),
-                            child: Text(
-                              "$timeActivity",
-                              style: TextStyle(
-                                  fontSize: 16, color: Color(0x70000000)),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
                 ),
                 SizedBox(
                   height: 10,
@@ -233,7 +185,7 @@ class EventDetails extends StatelessWidget {
                       child: Text(
                         "$locationActivity",
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                            fontSize: 17, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
@@ -247,52 +199,33 @@ class EventDetails extends StatelessWidget {
                     thickness: 1,
                   ),
                 ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(40, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () {
-                            Share.share("$shareActivity");
-                          },
-                          icon: Icon(Icons.ios_share_outlined)),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.fromLTRB(50, 10, 0, 0),
-                        child: Container(
-                          child: LikeButton(),
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () async {
-                            showDatePicker(
-                                context: context,
-                                initialDate: dateTime,
-                                firstDate: DateTime(2020),
-                                lastDate: DateTime(2100));
-                          },
-                          icon: Icon(Icons.calendar_month_outlined)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () async {
-                            final availableMaps =
-                                await MapLauncher.installedMaps;
-                            await availableMaps.first.showMarker(
-                              coords: Coords(latitude, longitude),
-                              title: "$titleLocation",
-                            );
-                          },
-                          icon: Icon(Icons.map)),
-                    ),
-                  ],
+                SizedBox(
+                  height: 3,
+                ),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+                        child: IconButton(
+                            onPressed: () {
+                              Share.share("$shareActivity");
+                            },
+                            icon: Icon(Icons.ios_share_outlined)),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+                          child: Container(
+                            child: LikeButton(),
+                          )),
+                    ],
+                  ),
                 ),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
                       child: InkWell(
                         onTap: () {
                           FlutterPhoneDirectCaller.callNumber("$phoneNumber");
@@ -319,10 +252,10 @@ class EventDetails extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 10),
+                      padding: const EdgeInsets.only(top: 10),
                       child: InkWell(
                         onTap: () {
-                          Get.to(pay());
+                          Get.to(() => pay());
                         },
                         child: Container(
                             height: 50,

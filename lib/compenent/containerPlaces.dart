@@ -13,16 +13,11 @@ class ContainerPlaces extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        InkWell(
-          onTap: () {
-           
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: Container(
-              height: 149,
-              child: Image.asset("$image"),
-            ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: Container(
+            height: 149,
+            child: Image.asset("$image"),
           ),
         ),
         Padding(
