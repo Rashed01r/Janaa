@@ -3,8 +3,7 @@ import 'package:final_project/compenent/homeComponents/Homecard2.dart';
 import 'package:final_project/view/Homehome.dart';
 import 'package:final_project/view/Singup.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
 
 import 'homeComponents/CloseHome.dart';
