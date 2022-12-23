@@ -55,7 +55,7 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
           elevation: 0,
           items: [
             BottomNavigationBarItem(
-                label: "78.".tr, icon: Icon(Icons.account_circle)),
+                label: "78".tr, icon: Icon(Icons.account_circle)),
             BottomNavigationBarItem(
                 label: "80".tr, icon:Icon(Icons.favorite)),
             BottomNavigationBarItem(
