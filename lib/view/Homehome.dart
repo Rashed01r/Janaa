@@ -1,9 +1,10 @@
-import 'package:final_project/compenent/HomeCard1.dart';
-import 'package:final_project/compenent/CloseHome.dart';
+import 'package:final_project/compenent/homeComponents/CloseHome.dart';
+import 'package:final_project/compenent/homeComponents/NewHome.dart';
+import 'package:final_project/compenent/homeComponents/upcoming.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -19,19 +20,18 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Home",
-            style: TextStyle(fontSize: 17, color: Color(0xffAD557A)),
-          ),
+            '71'.tr,
+            style: TextStyle(fontSize: 17, color: Color(0xffAD557A)), ),
           elevation: 0,
           backgroundColor: Color.fromARGB(0, 255, 255, 255)),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 160.0),
+            padding: const EdgeInsets.only(left: 160.0 ,right: 160),
             child: Row(
               children: [
                 Icon(Icons.arrow_drop_down),
-                Text("الرياض"),
+                Text('72'.tr,style: TextStyle(fontWeight: FontWeight.bold,)),
               ],
             ),
           ),
@@ -58,9 +58,18 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.circular(20)),
                       child: Center(
                           child: Text(
-                        "لا تبخل على على ابنك واشتر تذكرة ",
-                        style:
-                            TextStyle(color: Color(0xffFFFFFF), fontSize: 18),
+                        "73".tr,
+                        style: TextStyle(
+                            color: Color(0xffFFFFFF),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold, shadows: <Shadow>[
+      Shadow(
+        offset: Offset(2.0, 2.0),
+        blurRadius: 3.0,
+        color: Color.fromARGB(255, 16, 16, 16),
+      ),
+     
+    ],),
                       ))),
                 ),
               )
@@ -81,44 +90,36 @@ class _HomeState extends State<Home> {
                           children: <Widget>[
                             Container(
                               child: TabBar(
+                                automaticIndicatorColorAdjustment: true,
                                 labelColor: Color(0xff5F95D4),
                                 unselectedLabelColor: Colors.black,
                                 isScrollable: false,
                                 indicatorColor:
                                     Color.fromARGB(255, 10, 24, 224),
+                                    labelStyle: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,),
                                 tabs: [
-                                  Tab(text: 'العروض القادمة'),
-                                  Tab(text: 'العروض الأجدد'),
-                                  Tab(text: 'الأقرب إليك'),
+                                  //tabs lebels
+                                  Tab(text: '74'.tr),
+                                  Tab(text: '75'.tr,
+                                  
+                                  
+                                  ),
+                                  Tab(text: '76'.tr),
                                 ],
                               ),
                             ),
                             Container(
-                            
                                 height: 300,
-                                decoration:   BoxDecoration(color: Color.fromARGB(0, 0, 0, 0),
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(0, 0, 0, 0),
                                     border: Border(
                                         top: BorderSide(
-                                            color: Color.fromARGB(255, 130, 110, 110), width: 0.5))),
+                                            color: Color.fromARGB(
+                                                255, 130, 110, 110),
+                                            width: 0.5))),
                                 child: TabBarView(children: <Widget>[
-                                  Container(
-                                    child: Center(
-                                      child: Text('Display Tab 1',
-                                          style: TextStyle(
-                                              fontSize: 22,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                  ),
-                                  Container(
-                                    child: Center(
-                                      child: Text('Display Tab 2',
-                                          style: TextStyle(
-                                              fontSize: 22,
-                                              fontWeight: FontWeight.bold)),
-                                              
-                                    ),
-                                  ),Closetoyou()
-                               
+                                  // taps path
+                              Closetoyou()  , New(),  Upcoming(), 
                                 ]))
                           ])),
                 ]),

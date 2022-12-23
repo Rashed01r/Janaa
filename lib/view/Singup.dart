@@ -1,4 +1,5 @@
 import 'package:final_project/compenent/textFiledCoustom.dart';
+import 'package:final_project/controller/SingupControler.dart';
 import 'package:final_project/controller/loginController.dart';
 import 'package:final_project/view/HomePage.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +8,8 @@ import 'package:get/get.dart';
 
 class SingUp extends StatelessWidget {
   SingUp({super.key});
-  LoginController loginController = Get.put(LoginController());
 
+SingUpController singUpController =Get.put(SingUpController()); 
   final _email = GlobalKey<FormState>();
   final _pass = GlobalKey<FormState>();
   final _FirstName = GlobalKey<FormState>();
@@ -41,7 +42,7 @@ class SingUp extends StatelessWidget {
             child: TextFiledCustome(
                 formKey: _FirstName,
                 hint: "13".tr,
-                controller: loginController.emailCon),
+                controller: singUpController.FnameCon),
           ),
           SizedBox(
             height: 15,
@@ -51,7 +52,7 @@ class SingUp extends StatelessWidget {
             child: TextFiledCustome(
                 formKey: _LastName,
                 hint: "14".tr,
-                controller: loginController.emailCon),
+                controller: singUpController.LNameCon),
           ),
           SizedBox(
             height: 15,
@@ -61,7 +62,7 @@ class SingUp extends StatelessWidget {
             child: TextFiledCustome(
                 formKey: _email,
                 hint: "17".tr,
-                controller: loginController.emailCon),
+                controller: singUpController.emailCon),
           ),
           SizedBox(
             height: 15,
@@ -71,7 +72,7 @@ class SingUp extends StatelessWidget {
             child: TextFiledCustome(
                 formKey: _pass,
                 hint: "7".tr,
-                controller: loginController.emailCon),
+                controller: singUpController.passCon),
           ),
           SizedBox(
             height: 15,
@@ -81,7 +82,7 @@ class SingUp extends StatelessWidget {
             child: TextFiledCustome(
                 formKey: _ReenterPassword,
                 hint: "15".tr,
-                controller: loginController.emailCon),
+                controller: singUpController.RpassCon),
           ),
           SizedBox(height: 15),
           Padding(
