@@ -1,3 +1,4 @@
+import 'package:final_project/view/bookingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -50,273 +51,301 @@ class EventDetails extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            Stack(
+            Column(
               children: [
-                Image.asset("$image"),
-                Container(
-                  height: 50,
-                  width: 400,
-                  alignment: Alignment.center,
-                  color: Color(0x20000000),
-                  child: Text(
-                    "$nameCompany",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 130,
-              ),
-              child: Text(
-                "$nameActivity",
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
-              child: Text(
-                "$activityDetails",
-                style: TextStyle(fontSize: 15),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Divider(
-                thickness: 1,
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 15, top: 10, left: 15),
-                  child: Icon(
-                    Icons.access_time_outlined,
-                    color: Color(0xffAD557A),
-                  ),
-                ),
-                Column(
+                Stack(
                   children: [
-                    Row(
+                    Image.asset("$image",fit:BoxFit.cover ,),
+                    Container(
+                      height: 50,
+                      width: 400,
+                      alignment: Alignment.center,
+                      color: Color(0x20000000),
+                      child: Row(
+                        children: [
+                          IconButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              icon: Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.white,
+                              )),
+                          Text(
+                            "$nameCompany",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 130,
+                  ),
+                  child: Text(
+                    "$nameActivity",
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
+                  child: Text(
+                    "$activityDetails",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: Divider(
+                    thickness: 1,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(right: 15, top: 10, left: 15),
+                      child: Icon(
+                        Icons.access_time_outlined,
+                        color: Color(0xffAD557A),
+                      ),
+                    ),
+                    Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10, right: 10),
-                          child: Text(
-                            "57",
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10, right: 10),
-                          child: Text(
-                            "$dateActivity",
-                            style: TextStyle(
-                                fontSize: 16, color: Color(0x70000000)),
-                          ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 10, right: 10),
+                              child: Text(
+                                "57".tr,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 10, right: 10),
+                              child: Text(
+                                "$dateActivity",
+                                style: TextStyle(
+                                    fontSize: 16, color: Color(0x70000000)),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ],
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 58, left: 58),
-              child: Column(
-                children: [
-                  Row(
+                Padding(
+                  padding: const EdgeInsets.only(right: 58, left: 58),
+                  child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10, right: 10),
-                        child: Text(
-                          "59",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10, right: 10),
-                        child: Text(
-                          "$timeActivity",
-                          style:
-                              TextStyle(fontSize: 16, color: Color(0x70000000)),
-                        ),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, right: 10),
+                            child: Text(
+                              "59".tr,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, right: 10),
+                            child: Text(
+                              "$timeActivity",
+                              style: TextStyle(
+                                  fontSize: 16, color: Color(0x70000000)),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Divider(
-                thickness: 1,
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 15, top: 10, left: 15),
-                  child: Image.asset("images/buildings 1.png"),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 15, top: 15, left: 15),
-                  child: Text(
-                    "$city",
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: Divider(
+                    thickness: 1,
                   ),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Divider(
-                thickness: 1,
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, top: 10, left: 10),
-                  child: Icon(
-                    Icons.location_on_outlined,
-                    color: Color(0xffAD557A),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, top: 15, left: 7),
-                  child: Text(
-                    "$locationActivity",
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Divider(
-                thickness: 1,
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(40, 10, 0, 0),
-                  child: IconButton(
-                      onPressed: () {
-                        Share.share("$shareActivity");
-                      },
-                      icon: Icon(Icons.ios_share_outlined)),
-                ),
-                Padding(
-                    padding: const EdgeInsets.fromLTRB(50, 10, 0, 0),
-                    child: Container(
-                      child: LikeButton(),
-                    )),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                  child: IconButton(
-                      onPressed: () async {
-                        showDatePicker(
-                            context: context,
-                            initialDate: dateTime,
-                            firstDate: DateTime(2020),
-                            lastDate: DateTime(2100));
-                      },
-                      icon: Icon(Icons.calendar_month_outlined)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                  child: IconButton(
-                      onPressed: () async {
-                        final availableMaps = await MapLauncher.installedMaps;
-                        await availableMaps.first.showMarker(
-                          coords: Coords(latitude, longitude),
-                          title: "$titleLocation",
-                        );
-                      },
-                      icon: Icon(Icons.map)),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                  child: InkWell(
-                    onTap: () {
-                      FlutterPhoneDirectCaller.callNumber("$phoneNumber");
-                    },
-                    child: Container(
-                      height: 50,
-                      width: 183,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.white,
-                          boxShadow: <BoxShadow>[
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 3,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ]),
-                      child: Icon(
-                        Icons.call,
-                        color: Colors.blue,
+                Row(
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(right: 15, top: 10, left: 15),
+                      child: Image.asset("images/buildings 1.png"),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(right: 15, top: 15, left: 15),
+                      child: Text(
+                        "$city",
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
                       ),
                     ),
-                  ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10, top: 10),
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                        height: 50,
-                        width: 183,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Color(0xff1F61C3),
-                            boxShadow: <BoxShadow>[
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 3,
-                                blurRadius: 7,
-                                offset: Offset(0, 3),
-                              ),
-                            ]),
-                        child: Text(
-                          "62".tr,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold),
-                        )),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: Divider(
+                    thickness: 1,
                   ),
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(right: 10, top: 10, left: 10),
+                      child: Icon(
+                        Icons.location_on_outlined,
+                        color: Color(0xffAD557A),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(right: 10, top: 15, left: 7),
+                      child: Text(
+                        "$locationActivity",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: Divider(
+                    thickness: 1,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(40, 10, 0, 0),
+                      child: IconButton(
+                          onPressed: () {
+                            Share.share("$shareActivity");
+                          },
+                          icon: Icon(Icons.ios_share_outlined)),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.fromLTRB(50, 10, 0, 0),
+                        child: Container(
+                          child: LikeButton(),
+                        )),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
+                      child: IconButton(
+                          onPressed: () async {
+                            showDatePicker(
+                                context: context,
+                                initialDate: dateTime,
+                                firstDate: DateTime(2020),
+                                lastDate: DateTime(2100));
+                          },
+                          icon: Icon(Icons.calendar_month_outlined)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
+                      child: IconButton(
+                          onPressed: () async {
+                            final availableMaps =
+                                await MapLauncher.installedMaps;
+                            await availableMaps.first.showMarker(
+                              coords: Coords(latitude, longitude),
+                              title: "$titleLocation",
+                            );
+                          },
+                          icon: Icon(Icons.map)),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      child: InkWell(
+                        onTap: () {
+                          FlutterPhoneDirectCaller.callNumber("$phoneNumber");
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 183,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.white,
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 3,
+                                  blurRadius: 7,
+                                  offset: Offset(0, 3),
+                                ),
+                              ]),
+                          child: Icon(
+                            Icons.call,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10, top: 10),
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(pay());
+                        },
+                        child: Container(
+                            height: 50,
+                            width: 183,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: Color(0xff1F61C3),
+                                boxShadow: <BoxShadow>[
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 3,
+                                    blurRadius: 7,
+                                    offset: Offset(0, 3),
+                                  ),
+                                ]),
+                            child: Text(
+                              "62".tr,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

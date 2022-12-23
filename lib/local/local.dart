@@ -67,7 +67,15 @@ class MyLocale extends Translations {
           "60": "٣ - ٥ مساءً",
           "61":
               "الاتحاد السعودي للأمن السيبراني والبرمجة والدرونز ، جامعة الأميرة نورة",
-              "62":"احجز الآن",
+          "62": "احجز الآن",
+          "63": "عدد التذاكر",
+          "64": "سعر التذكرة",
+          "65": "الاجمالي",
+          "66": "اختر طريقة الدفع",
+          "67": "اتمام الدفع",
+          "68":"ألحجز",
+          "69":"فعالية سبتات للفتيات",
+          "70":"ٌقدوة للتدريب",
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -134,6 +142,12 @@ class MyLocale extends Translations {
           "61":
               "Saudi Federation for Cybersecurity, Programming and Drones\n, Princess Noura University",
           "62": "Book Now",
+          "63": "Tickets quntity",
+          "64": "Ticket price",
+          "65": "Total",
+          "66": "Choose payment method",
+          "67": "Complete Payment",
+          "68":"Booking"
         }
       };
 }
