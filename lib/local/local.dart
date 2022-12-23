@@ -76,6 +76,17 @@ class MyLocale extends Translations {
           "68":"ألحجز",
           "69":"فعالية سبتات للفتيات",
           "70":"ٌقدوة للتدريب",
+          "71": "الرئيسية",
+          "72": "الرياض",
+          "73": "لا تبخل على طفلك واشتر التذكرة الان",
+          "74": "الأقرب إليك",
+          "75": "الأجدد",
+          "76": "الفعاليات القادمة",
+          "77": "الفعاليالت",
+          "78": "شخصي",
+          "79": "الاماكن",
+          "80": "المفضلة",
+          "81": "الانشطة",
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -147,7 +158,18 @@ class MyLocale extends Translations {
           "65": "Total",
           "66": "Choose payment method",
           "67": "Complete Payment",
-          "68":"Booking"
+          "68":"Booking",
+           "71": "Home",
+          "72": "Riyadh",
+          "73": "Don't skimp on your child and buy the ticket now",
+          "74": "closest to you",
+          "75": " newest",
+          "76": "Upcoming Events",
+          "77": "activities",
+          "78": "profile",
+          "79": "places",
+          "80": "Favorite",
+          "81": "Events",
         }
       };
 }

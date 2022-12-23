@@ -1,6 +1,5 @@
 import 'package:final_project/compenent/containerFliter.dart';
 import 'package:final_project/view/LoginPage.dart';
-import 'package:final_project/view/Singup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';

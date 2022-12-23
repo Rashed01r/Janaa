@@ -1,9 +1,10 @@
 import 'package:final_project/view/LoginPage.dart';
-import 'package:final_project/view/Singup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+
+import '../Singup.dart';
 
 class BottomSheetCustome extends StatelessWidget {
   BottomSheetCustome({super.key, required this.label});
