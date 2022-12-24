@@ -21,7 +21,7 @@ SizedBox(height: 5,),
                   width: (MediaQuery.of(context).size.width ),
                 height: (MediaQuery.of(context).size.height / 2)-200,
                 child: HomeCard3(
-                 imagepath: "images/برنامج ترفيهي.png",
+                 imagepath: "images/قدوتي.png",
                     Agerange: "5-14",
                     NameAr: "قدوتي",
                     NameEN: " My role model",

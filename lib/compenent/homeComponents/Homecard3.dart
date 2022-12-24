@@ -14,7 +14,7 @@ class HomeCard3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
+      body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width / 2 + 170,
@@ -103,7 +103,6 @@ class HomeCard3 extends StatelessWidget {
                                               color: Color(0xff1F61C3)),
                                         ),
                                       ),
-                                      
                                     ],
                                   ),
                                 ),

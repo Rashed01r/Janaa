@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
-import '../Singup.dart';
+import '../view/Singup.dart';
 
 class BottomSheetCustome extends StatelessWidget {
   BottomSheetCustome({super.key, required this.label});
