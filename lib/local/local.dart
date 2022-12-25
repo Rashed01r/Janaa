@@ -82,11 +82,12 @@ class MyLocale extends Translations {
           "74": "الأقرب إليك",
           "75": "الأجدد",
           "76": "الفعاليات القادمة",
-          "77": "الفعاليالت",
+          "77": "الفعاليات",
           "78": "شخصي",
           "79": "الاماكن",
           "80": "المفضلة",
           "81": "الانشطة",
+          "82" : "رقم الجوال",
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -170,6 +171,7 @@ class MyLocale extends Translations {
           "79": "places",
           "80": "Favorite",
           "81": "Events",
+          "83" :"phone number",
         }
       };
 }

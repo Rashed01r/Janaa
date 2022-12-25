@@ -7,19 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SingUp extends StatelessWidget {
-  SingUp({super.key});
+  SingUp({super.key,});
 
-SingUpController singUpController =Get.put(SingUpController()); 
+  SingUpController singUpController = Get.put(SingUpController());
+  
   final _email = GlobalKey<FormState>();
   final _pass = GlobalKey<FormState>();
   final _FirstName = GlobalKey<FormState>();
   final _LastName = GlobalKey<FormState>();
   final _ReenterPassword = GlobalKey<FormState>();
-
+  final _phone = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "2".tr,
@@ -53,6 +54,42 @@ SingUpController singUpController =Get.put(SingUpController());
                 formKey: _LastName,
                 hint: "14".tr,
                 controller: singUpController.LNameCon),
+          ), SizedBox(
+            height: 15,
+          ),
+          SizedBox(
+            height: 50,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Container(
+                width: 320,
+                height: 80,
+              
+                child: Form(
+                key: _phone,
+                  child: TextFormField(
+                    keyboardType:  TextInputType.number,
+                      validator: (text) {
+                        if (text == null || text.isEmpty) {
+                          return "Text is empty";
+                        }
+                      },
+                      controller: singUpController.phone,
+                      textAlign: TextAlign.left,
+                      decoration: InputDecoration(
+                        hintText: "phone",
+                        hintStyle: TextStyle(color: Color(0x20000000)),
+                        filled: true,
+                        fillColor: Color(0xffECF0F1),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide.none,
+                          
+                        ),
+                      )),
+                ),
+              ),
+            ),
           ),
           SizedBox(
             height: 15,
@@ -86,30 +123,47 @@ SingUpController singUpController =Get.put(SingUpController());
           ),
           SizedBox(height: 15),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 35, ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 35,
+            ),
             child: Container(
               height: 50,
-              
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xff1F61C3)),
               child: TextButton(
                   onPressed: () {
+                  var valEmail = _email.currentState!.validate();
+                  var valPass = _pass.currentState!.validate();
+                    var valfirst = 
+                    _FirstName.currentState!.validate();
+                      var valast = _LastName.currentState!.validate();
+                        var valReset = _ReenterPassword.currentState!.validate();
+                          var valPhone = _phone.currentState!.validate();
+                         
+                     if (valEmail && valPass &&valfirst &&valast &&valReset &&valPhone) {
                     Get.to(LoginPage());
+                  }
                   },
                   child: Text(
                     '16'.tr,
                     style: TextStyle(color: Colors.white),
-                    
                   )),
             ),
           ),
           SizedBox(
             height: 20,
           ),
-Center(child: Text("18".tr,style: TextStyle(fontSize: 15),),)
-, Center(child: Text("19".tr,style: TextStyle(fontSize: 15,color: Color(0xffAD557A))),)
-
+          Center(
+            child: Text(
+              "18".tr,
+              style: TextStyle(fontSize: 15),
+            ),
+          ),
+          Center(
+            child: Text("19".tr,
+                style: TextStyle(fontSize: 15, color: Color(0xffAD557A))),
+          )
         ],
       ),
     );

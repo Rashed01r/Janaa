@@ -8,6 +8,7 @@ class SingUpController extends GetxController{
    final FnameCon = TextEditingController();
   final LNameCon = TextEditingController();
   final RpassCon = TextEditingController();
+  final phone = TextEditingController();
   
 
 }
