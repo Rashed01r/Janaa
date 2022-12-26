@@ -16,14 +16,15 @@ class ContainerPlaces extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 15, right: 15),
           child: Container(
-            height: 149,
+            height: 124,
+            width: 136,
             child: Image.asset("$image"),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 15, top: 120, right: 15),
           child: Container(
-            width: 165,
+            width: 136,
             height: 29,
             alignment: Alignment.center,
             decoration: BoxDecoration(

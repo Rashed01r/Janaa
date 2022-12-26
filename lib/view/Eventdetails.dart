@@ -53,97 +53,127 @@ class EventDetails extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            Column(
-              children: [
-                Stack(
-                  children: [
-                    Image.asset(
-                      "$image",
-                      fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 4),
+              child: Column(
+                children: [
+                  Stack(
+                    children: [
+                      Image.asset(
+                        "$image",
+                        fit: BoxFit.cover,
+                      ),
+                      Container(
+                        height: 50,
+                        width: 400,
+                        alignment: Alignment.center,
+                        color: Color(0x20000000),
+                        child: Row(
+                          children: [
+                            IconButton(
+                                onPressed: () {
+                                  Get.back();
+                                },
+                                icon: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.white,
+                                )),
+                            Text(
+                              "$nameCompany",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 280,
                     ),
-                    Container(
-                      height: 50,
-                      width: 400,
-                      alignment: Alignment.center,
-                      color: Color(0x20000000),
-                      child: Row(
+                    child: Text(
+                      "$nameActivity",
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
+                    child: Text(
+                      "$activityDetails",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Divider(
+                      thickness: 1,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 15, top: 10, left: 15),
+                        child: Icon(
+                          Icons.access_time_outlined,
+                          color: Color(0xffAD557A),
+                        ),
+                      ),
+                      Column(
                         children: [
-                          IconButton(
-                              onPressed: () {
-                                Get.back();
-                              },
-                              icon: Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.white,
-                              )),
-                          Text(
-                            "$nameCompany",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
+                          Row(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 10, right: 10),
+                                child: Text(
+                                  "57".tr,
+                                  style: TextStyle(
+                                      fontSize: 16, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 10, right: 10),
+                                child: Text(
+                                  "$dateActivity",
+                                  style: TextStyle(
+                                      fontSize: 16, color: Color(0x70000000)),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 280,
+                    ],
                   ),
-                  child: Text(
-                    "$nameActivity",
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
-                  child: Text(
-                    "$activityDetails",
-                    style: TextStyle(fontSize: 15),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Divider(
-                    thickness: 1,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(right: 15, top: 10, left: 15),
-                      child: Icon(
-                        Icons.access_time_outlined,
-                        color: Color(0xffAD557A),
-                      ),
-                    ),
-                    Column(
+                  Padding(
+                    padding: const EdgeInsets.only(right: 48, left: 48),
+                    child: Column(
                       children: [
                         Row(
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 10, right: 10),
+                              padding: const EdgeInsets.only(top: 10, right: 10),
                               child: Text(
-                                "57".tr,
+                                "59".tr,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold),
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 10, right: 10),
+                              padding: const EdgeInsets.only(top: 10, right: 10),
                               child: Text(
-                                "$dateActivity",
+                                "$timeActivity",
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0x70000000)),
                               ),
@@ -152,154 +182,118 @@ class EventDetails extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 58, left: 58),
-                  child: Column(
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Divider(
+                      thickness: 1,
+                    ),
+                  ),
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, right: 10),
-                            child: Text(
-                              "59".tr,
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, right: 10),
-                            child: Text(
-                              "$timeActivity",
-                              style: TextStyle(
-                                  fontSize: 16, color: Color(0x70000000)),
-                            ),
-                          ),
-                        ],
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 15, top: 10, left: 15),
+                        child: Image.asset("images/buildings 1.png"),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 15, top: 15, left: 15),
+                        child: Text(
+                          "$city",
+                          style: TextStyle(
+                              fontSize: 17, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Divider(
-                    thickness: 1,
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(right: 15, top: 10, left: 15),
-                      child: Image.asset("images/buildings 1.png"),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Divider(
+                      thickness: 1,
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(right: 15, top: 15, left: 15),
-                      child: Text(
-                        "$city",
-                        style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Divider(
-                    thickness: 1,
                   ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(right: 10, top: 10, left: 10),
-                      child: Icon(
-                        Icons.location_on_outlined,
-                        color: Color(0xffAD557A),
+                  Row(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 10, top: 10, left: 10),
+                        child: Icon(
+                          Icons.location_on_outlined,
+                          color: Color(0xffAD557A),
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(right: 10, top: 15, left: 7),
-                      child: Text(
-                        "$locationActivity",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 10, top: 15, left: 7),
+                        child: Text(
+                          "$locationActivity",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Divider(
-                    thickness: 1,
+                    ],
                   ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(40, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () {
-                            Share.share("$shareActivity");
-                          },
-                          icon: Icon(Icons.ios_share_outlined)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Divider(
+                      thickness: 1,
                     ),
-                    Padding(
-                        padding: const EdgeInsets.fromLTRB(50, 10, 0, 0),
-                        child: Container(
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment:MainAxisAlignment.spaceAround,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Share.share("$shareActivity");
+                            },
+                            icon: Icon(Icons.ios_share_outlined)),
+                        Container(
                           child: LikeButton(),
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () async {
-                            showDatePicker(
-                                context: context,
-                                initialDate: dateTime,
-                                firstDate: DateTime(2020),
-                                lastDate: DateTime(2100));
-                          },
-                          icon: Icon(Icons.calendar_month_outlined)),
+                        ),
+                        IconButton(
+                            onPressed: () async {
+                              showDatePicker(
+                                  context: context,
+                                  initialDate: dateTime,
+                                  firstDate: DateTime(2020),
+                                  lastDate: DateTime(2100));
+                            },
+                            icon: Icon(Icons.calendar_month_outlined)),
+                        IconButton(
+                            onPressed: () async {
+                              final availableMaps =
+                                  await MapLauncher.installedMaps;
+                              await availableMaps.first.showMarker(
+                                coords: Coords(latitude, longitude),
+                                title: "$titleLocation",
+                              );
+                            },
+                            icon: Icon(Icons.map)),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                      child: IconButton(
-                          onPressed: () async {
-                            final availableMaps =
-                                await MapLauncher.installedMaps;
-                            await availableMaps.first.showMarker(
-                              coords: Coords(latitude, longitude),
-                              title: "$titleLocation",
-                            );
-                          },
-                          icon: Icon(Icons.map)),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                      child: InkWell(
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
                         onTap: () {
                           FlutterPhoneDirectCaller.callNumber("$phoneNumber");
                         },
                         child: Container(
                           height: 50,
-                          width: 183,
+                          width: 136,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25),
                               color: Colors.white,
@@ -317,16 +311,14 @@ class EventDetails extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 10),
-                      child: InkWell(
+                      SizedBox(width: 8,),
+                      InkWell(
                         onTap: () {
                           Get.to(pay());
                         },
                         child: Container(
                             height: 50,
-                            width: 183,
+                            width: 136,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
@@ -347,10 +339,11 @@ class EventDetails extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                             )),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  SizedBox(height: 16,),
+                ],
+              ),
             ),
           ],
         ),

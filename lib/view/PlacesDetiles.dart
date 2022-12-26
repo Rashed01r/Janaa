@@ -58,18 +58,39 @@ class PlacesDet extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-              child: Text(
-            "$namePlace",
-            style: TextStyle(
-                color: Color(0xffAD557A),
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
-          )),
+
+          Container(
+            height: 50,
+            width: 400,
+            alignment: Alignment.center,
+            //color: Color(0x20000000),
+            child: Row(
+              children: [
+                IconButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.blue,
+                    )),
+                Text(
+                  "$namePlace",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
           SizedBox(
             height: 30,
           ),
-          SearchBar(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SearchBar(),
+          ),
           SizedBox(
             height: 30,
           ),

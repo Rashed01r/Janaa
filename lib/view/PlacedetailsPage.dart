@@ -78,18 +78,24 @@ class Placedetails extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "$nameActivity",
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.only(left:8.0,right: 8),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "$nameActivity",
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "$activityDetails",
-                    style: TextStyle(fontSize: 15),
+                Padding(
+                  padding: const EdgeInsets.only(left:8.0,right: 8),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "$activityDetails",
+                      style: TextStyle(fontSize: 15),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -232,7 +238,7 @@ class Placedetails extends StatelessWidget {
                         },
                         child: Container(
                           height: 50,
-                          width: 183,
+                          width: 164,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25),
                               color: Colors.white,
@@ -251,6 +257,7 @@ class Placedetails extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(width: 8,),
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: InkWell(
@@ -259,7 +266,7 @@ class Placedetails extends StatelessWidget {
                         },
                         child: Container(
                             height: 50,
-                            width: 183,
+                            width: 164,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
@@ -283,6 +290,7 @@ class Placedetails extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 12,),
               ],
             ),
           ],

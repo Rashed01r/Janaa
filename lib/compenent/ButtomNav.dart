@@ -26,7 +26,8 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
 
     ProfilePage(),
     Favorite(),
-    PlacesPage(), ActivityPage(),
+    PlacesPage(),
+    ActivityPage(),
     Home(),
   ];
 

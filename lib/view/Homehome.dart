@@ -14,6 +14,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String dropdownvalue = 'مكة';
+  var itemsCity = ['الرياض','مكة',
+  'جدة',
+  'المدينة',
+    'الدمام',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,35 +32,62 @@ class _HomeState extends State<Home> {
           backgroundColor: Color.fromARGB(0, 255, 255, 255)),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 160.0 ,right: 160),
-            child: Row(
-              children: [
-                Icon(Icons.arrow_drop_down),
-                Text('72'.tr,style: TextStyle(fontWeight: FontWeight.bold,)),
-              ],
+          Center(
+            // child: Row(
+            //   children: [
+            //     Icon(Icons.arrow_drop_down),
+            //     Text('72'.tr,style: TextStyle(fontWeight: FontWeight.bold,)),
+            //   ],
+            // ),
+            child: DropdownButton<String>(
+
+              value: dropdownvalue,
+              icon: Icon(Icons.keyboard_arrow_down),
+              items: itemsCity.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(fontSize: 16,
+                        fontWeight: FontWeight.w800
+                    ),
+                  ),
+                );
+              }).toList(),
+              // Step 5.
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                });
+              },
             ),
           ),
           Stack(
             children: [
               Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height / 5 - 10,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset(
-                      "images/Screenshot 1444-05-25 at 10.22 1.png"),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 5 - 10,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: Image.asset(
+                        "images/Screenshot 1444-05-25 at 10.22 1.png",
+                      colorBlendMode: BlendMode.colorBurn,
+                    filterQuality: FilterQuality.high,),
+    ),
+                  ),
                 ),
-              ),
+
               Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 37,
+                    horizontal: 24,
                   ),
                   child: Container(
                       height: MediaQuery.of(context).size.height / 5 - 10,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(86, 0, 0, 0),
+                         // color: Color.fromARGB(86, 0, 0, 0),
                           borderRadius: BorderRadius.circular(20)),
                       child: Center(
                           child: Text(
@@ -68,48 +101,42 @@ class _HomeState extends State<Home> {
         blurRadius: 3.0,
         color: Color.fromARGB(255, 16, 16, 16),
       ),
-     
+
     ],),
                       ))),
                 ),
               )
             ],
           ),
-          Row(
-            children: [],
-          ),
-          Container(
+
+          Expanded(
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   DefaultTabController(
                       length: 3, // length of tabs
                       initialIndex: 0,
                       child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-                            Container(
-                              child: TabBar(
-                                automaticIndicatorColorAdjustment: true,
-                                labelColor: Color(0xff5F95D4),
-                                unselectedLabelColor: Colors.black,
-                                isScrollable: false,
-                                indicatorColor:
-                                    Color.fromARGB(255, 10, 24, 224),
-                                    labelStyle: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,),
-                                tabs: [
-                                  //tabs lebels
-                                  Tab(text: '74'.tr),
-                                  Tab(text: '75'.tr,
-                                  
-                                  
-                                  ),
-                                  Tab(text: '76'.tr),
-                                ],
-                              ),
+                            TabBar(
+                              automaticIndicatorColorAdjustment: true,
+                              labelColor: Color(0xff5F95D4),
+                              unselectedLabelColor: Colors.black,
+                              isScrollable: false,
+                              indicatorColor:
+                                  Color.fromARGB(255, 10, 24, 224),
+                                  labelStyle: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,),
+                              tabs: [
+                                //tabs lebels
+                                Tab(text: '74'.tr),
+                                Tab(text: '75'.tr,
+
+
+                                ),
+                                Tab(text: '76'.tr),
+                              ],
                             ),
                             Container(
-                                height: 300,
+                                height: MediaQuery.of(context).size.height/2.1,
                                 decoration: BoxDecoration(
                                     color: Color.fromARGB(0, 0, 0, 0),
                                     border: Border(
@@ -119,7 +146,7 @@ class _HomeState extends State<Home> {
                                             width: 0.5))),
                                 child: TabBarView(children: <Widget>[
                                   // taps path
-                              Closetoyou()  , New(),  Upcoming(), 
+                              Closetoyou()  , New(),  Upcoming(),
                                 ]))
                           ])),
                 ]),

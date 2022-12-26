@@ -29,10 +29,10 @@ class _CustomContainerState extends State<CustomContainer> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 4),
       child: Container(
-        height: 210,
-        width: 180,
+        height: 236,
+        width: 160,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -45,86 +45,82 @@ class _CustomContainerState extends State<CustomContainer> {
           ],
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Expanded(
-          child: Column(
-            children: [
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Stack(children: [
-                    widget.ActivityImage,
-                    Row(
-                      children: [
-                        Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              child: LikeButton(),
-                            )),
-                      ],
-                    )
-                  ])),
-              SizedBox(
-                height: 20,
+        child: Column(
+          children: [
+            ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Stack(children: [
+                  widget.ActivityImage,
+                  Row(
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            child: LikeButton(),
+                          )),
+                    ],
+                  )
+                ])),
+            Spacer(flex: 1,),
+            Text(
+              widget.ActivityNameEng,
+              style: TextStyle(
+                  color: Color(0xff1F61C3),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              widget.ActivityNameAra,
+              style: TextStyle(color: Color(0xff1F61C3), fontSize: 12),
+            ),
+            Text(
+              widget.City,
+              style: TextStyle(
+                  color: Color.fromARGB(143, 31, 97, 195), fontSize: 12),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Stack(
+                    children: [
+                      Text(
+                        widget.Firstprice,
+                        style: TextStyle(
+                            decoration: TextDecoration.lineThrough,
+                            color: Color(0xff929090),
+                            fontSize: 10),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    "SR",
+                    style: TextStyle(
+                        decoration: TextDecoration.lineThrough,
+                        color: Color(0xff929090),
+                        fontSize: 10),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    widget.Finalprice,
+                    style: TextStyle(
+                        color: Color(0xffAD557A),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    "SR",
+                    style: TextStyle(color: Color(0xffAD557A), fontSize: 10),
+                  ),
+                ],
               ),
-              Text(
-                widget.ActivityNameEng,
-                style: TextStyle(
-                    color: Color(0xff1F61C3),
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                widget.ActivityNameAra,
-                style: TextStyle(color: Color(0xff1F61C3), fontSize: 12),
-              ),
-              Text(
-                widget.City,
-                style: TextStyle(
-                    color: Color.fromARGB(143, 31, 97, 195), fontSize: 12),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Stack(
-                      children: [
-                        Text(
-                          widget.Firstprice,
-                          style: TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: Color(0xff929090),
-                              fontSize: 10),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      "SR",
-                      style: TextStyle(
-                          decoration: TextDecoration.lineThrough,
-                          color: Color(0xff929090),
-                          fontSize: 10),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      widget.Finalprice,
-                      style: TextStyle(
-                          color: Color(0xffAD557A),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      "SR",
-                      style: TextStyle(color: Color(0xffAD557A), fontSize: 10),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

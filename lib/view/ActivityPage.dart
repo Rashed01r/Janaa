@@ -16,10 +16,12 @@ class _ActivityPageState extends State<ActivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(children: [
-          Center(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 12),
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Center(
                     child: Text(
@@ -414,8 +416,8 @@ class _ActivityPageState extends State<ActivityPage> {
                 ),
               ],
             ),
-          )
-        ]),
+          ),
+        ),
       ),
     );
   }

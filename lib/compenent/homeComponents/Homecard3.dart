@@ -40,7 +40,7 @@ class HomeCard3 extends StatelessWidget {
                               color: Color.fromARGB(255, 255, 255, 255),
                             ),
                             height:
-                                (MediaQuery.of(context).size.height / 7) + 10,
+                            (MediaQuery.of(context).size.height / 7) + 10,
                             width: MediaQuery.of(context).size.width + 50,
                             child: Column(
                               children: [
@@ -64,7 +64,7 @@ class HomeCard3 extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 178, right: 150),
+                                      left: 134, right: 133),
                                   child: Column(
                                     children: [
                                       Row(
@@ -78,9 +78,9 @@ class HomeCard3 extends StatelessWidget {
                                           ),
                                           ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(12),
+                                            BorderRadius.circular(12),
                                             child:
-                                                Image.asset("images/pin 1.png"),
+                                            Image.asset("images/pin 1.png"),
                                           ),
                                         ],
                                       ),
@@ -108,7 +108,7 @@ class HomeCard3 extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(8.0, 0, 220, 0),
+                                  const EdgeInsets.fromLTRB(8.0, 0, 124, 0),
                                   child: Row(
                                     children: [
                                       Padding(
@@ -139,7 +139,7 @@ class HomeCard3 extends StatelessWidget {
                           child: Container(
                               width: (MediaQuery.of(context).size.width),
                               height:
-                                  (MediaQuery.of(context).size.height / 6) + 3,
+                                  (MediaQuery.of(context).size.height / 6) + 2,
                               child: Image.asset(
                                 "${imagepath}",
                                 fit: BoxFit.fill,

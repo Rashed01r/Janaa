@@ -7,10 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SingUp extends StatelessWidget {
-  SingUp({super.key,});
+  SingUp({
+    super.key,
+  });
 
   SingUpController singUpController = Get.put(SingUpController());
-  
+
   final _email = GlobalKey<FormState>();
   final _pass = GlobalKey<FormState>();
   final _FirstName = GlobalKey<FormState>();
@@ -54,7 +56,8 @@ class SingUp extends StatelessWidget {
                 formKey: _LastName,
                 hint: "14".tr,
                 controller: singUpController.LNameCon),
-          ), SizedBox(
+          ),
+          SizedBox(
             height: 15,
           ),
           SizedBox(
@@ -64,11 +67,10 @@ class SingUp extends StatelessWidget {
               child: Container(
                 width: 320,
                 height: 80,
-              
                 child: Form(
-                key: _phone,
+                  key: _phone,
                   child: TextFormField(
-                    keyboardType:  TextInputType.number,
+                      keyboardType: TextInputType.number,
                       validator: (text) {
                         if (text == null || text.isEmpty) {
                           return "Text is empty";
@@ -84,7 +86,6 @@ class SingUp extends StatelessWidget {
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide.none,
-                          
                         ),
                       )),
                 ),
@@ -133,17 +134,21 @@ class SingUp extends StatelessWidget {
                   color: Color(0xff1F61C3)),
               child: TextButton(
                   onPressed: () {
-                  var valEmail = _email.currentState!.validate();
-                  var valPass = _pass.currentState!.validate();
-                    var valfirst = 
-                    _FirstName.currentState!.validate();
-                      var valast = _LastName.currentState!.validate();
-                        var valReset = _ReenterPassword.currentState!.validate();
-                          var valPhone = _phone.currentState!.validate();
-                         
-                     if (valEmail && valPass &&valfirst &&valast &&valReset &&valPhone) {
-                    Get.to(LoginPage());
-                  }
+                    var valEmail = _email.currentState!.validate();
+                    var valPass = _pass.currentState!.validate();
+                    var valfirst = _FirstName.currentState!.validate();
+                    var valast = _LastName.currentState!.validate();
+                    var valReset = _ReenterPassword.currentState!.validate();
+                    var valPhone = _phone.currentState!.validate();
+
+                    if (valEmail &&
+                        valPass &&
+                        valfirst &&
+                        valast &&
+                        valReset &&
+                        valPhone) {
+                      Get.to(LoginPage());
+                    }
                   },
                   child: Text(
                     '16'.tr,

@@ -37,126 +37,115 @@ class Homecard2 extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            height: 0,
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(9.0),
-                              color: Color.fromARGB(255, 255, 255, 255),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(9.0),
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                        height: (MediaQuery.of(context).size.height / 7) + 20,
+                        width: MediaQuery.of(context).size.width + 50,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(0.0),
+                              child: Text(
+                                NameEN!,
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff1F61C3)),
+                              ),
                             ),
-                            height:
-                                (MediaQuery.of(context).size.height / 7) + 10,
-                            width: MediaQuery.of(context).size.width + 50,
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: Text(
-                                    NameEN!,
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color(0xff1F61C3)),
+                            Padding(
+                              padding: const EdgeInsets.all(0.0),
+                              child: Text(NameAr!,
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff1F61C3))),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 124, right: 124),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "72".tr,
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xff1F61C3)),
+                                      ),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(12),
+                                        child: Image.asset("images/pin 1.png"),
+                                      ),
+                                    ],
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: Text(NameAr!,
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 36.0, right: 20),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(7, 0, 0, 0),
+                                    child: Text(
+                                      " ${Agerange!}Y",
                                       style: TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xff1F61C3))),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 178, right: 150),
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "72".tr,
-                                            style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color(0xff1F61C3)),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(12),
-                                            child:
-                                                Image.asset("images/pin 1.png"),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                          color: Color(0xff1F61C3)),
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 55.0, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            7, 0, 0, 0),
-                                        child: Text(
-                                          " ${Agerange!}Y",
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color(0xff1F61C3)),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            0, 2, 2, 0),
-                                        child: Text(
-                                          "${Prantavrge!}APR",
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color(0xff1F61C3)),
-                                        ),
-                                      ),
-                                    ],
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 2, 2, 0),
+                                    child: Text(
+                                      "${Prantavrge!}APR",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xff1F61C3)),
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(8.0, 0, 220, 0),
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            0, 0, 80, 0),
-                                        child: Row(
-                                          children: [
-                                            Text("${oldPrice}"!,
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    fontWeight: FontWeight.bold,
-                                                    decoration: TextDecoration
-                                                        .lineThrough,
-                                                    color: Color(0xff929090))),
-                                            Text("${price!}SR",
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xffAD557A))),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(8.0, 0, 25, 0),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 80, 0),
+                                    child: Row(
+                                      children: [
+                                        Text("${oldPrice}",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.bold,
+                                                decoration:
+                                                    TextDecoration.lineThrough,
+                                                color: Color(0xff929090))),
+                                        Text("${price!}SR",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xffAD557A))),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 300.0),
