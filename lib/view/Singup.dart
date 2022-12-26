@@ -1,4 +1,5 @@
 import 'package:final_project/compenent/textFiledCoustom.dart';
+import 'package:final_project/compenent/textFiledPass.dart';
 import 'package:final_project/controller/SingupControler.dart';
 import 'package:final_project/controller/loginController.dart';
 import 'package:final_project/view/LoginPage.dart';
@@ -107,20 +108,20 @@ class SingUp extends StatelessWidget {
           ),
           SizedBox(
             height: 50,
-            child: TextFiledCustome(
+            child: TextFiledPass(
                 formKey: _pass,
                 hint: "7".tr,
-                controller: singUpController.passCon),
+                controller: singUpController.RpassCon),
           ),
           SizedBox(
             height: 15,
           ),
           SizedBox(
             height: 50,
-            child: TextFiledCustome(
+            child: TextFiledPass(
                 formKey: _ReenterPassword,
                 hint: "15".tr,
-                controller: singUpController.RpassCon),
+                controller: singUpController.passCon),
           ),
           SizedBox(height: 15),
           Padding(
@@ -147,7 +148,7 @@ class SingUp extends StatelessWidget {
                         valast &&
                         valReset &&
                         valPhone) {
-                      Get.to(LoginPage());
+                      singUpController.signUp();
                     }
                   },
                   child: Text(

@@ -16,7 +16,7 @@ class MyCard extends StatelessWidget {
   String? NameEN;
   int? destance;
   int? price;
-  int? oldPrice; 
+  int? oldPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +48,14 @@ class MyCard extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Container(
-                              decoration: BoxDecoration(
+                            decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  image: AssetImage("${imagepath}"),
-                                  fit: BoxFit.cover
-                                ),
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: 200,
-                              height:(MediaQuery.of(context).size.height / 3) + 5,
+                                    image: AssetImage("${imagepath}"),
+                                    fit: BoxFit.cover),
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 200,
+                            height:
+                                (MediaQuery.of(context).size.height / 3) + 5,
                           ),
                         ),
                         Padding(
@@ -93,13 +93,17 @@ class MyCard extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                           color: Color(0xff1F61C3))),
                                 ),
-                                Spacer(flex: 1,),
+                                Spacer(
+                                  flex: 1,
+                                ),
                                 Align(
                                   alignment: Alignment.bottomCenter,
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
                                     child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
@@ -116,15 +120,19 @@ class MyCard extends StatelessWidget {
                                               Text("${oldPrice}",
                                                   style: TextStyle(
                                                       fontSize: 10,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       decoration: TextDecoration
                                                           .lineThrough,
-                                                      color: Color(0xff929090))),
+                                                      color:
+                                                          Color(0xff929090))),
                                               Text("${price}",
                                                   style: TextStyle(
                                                       fontSize: 10,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Color(0xffAD557A))),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color:
+                                                          Color(0xffAD557A))),
                                             ],
                                           ),
                                         ),
