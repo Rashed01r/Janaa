@@ -1,18 +1,21 @@
+import 'package:final_project/controller/SingupControler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
 
-//hhh
-class TextFiledCustome extends StatelessWidget {
-  TextFiledCustome(
+class TextFiledPass extends StatelessWidget {
+  TextFiledPass(
       {super.key,
       required this.formKey,
       required this.hint,
       required this.controller});
+  SingUpController singUpController = Get.put(SingUpController());
 
   String hint;
   TextEditingController? controller = new TextEditingController();
   final GlobalKey formKey;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,14 +25,18 @@ class TextFiledCustome extends StatelessWidget {
         height: 80,
         child: Form(
           key: formKey,
-          //autovalidateMode: AutovalidateMode.onUserInteraction,
           child: TextFormField(
               validator: (text) {
                 if (text == null || text.isEmpty) {
-                  return "Text is empty";
+                  return "Text is password";
+                } else if (text.length < 8) {
+                  return "Password must be atleast 8 characters long";
                 }
-                return null;
-                
+                if (text != singUpController.RpassCon.text) {
+                  return "Password must be same as above";
+                } else {
+                  return null;
+                }
               },
               controller: controller,
               textAlign: TextAlign.left,

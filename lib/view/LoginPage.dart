@@ -64,7 +64,8 @@ class LoginPage extends StatelessWidget {
                   var valPass = _pass.currentState!.validate();
 
                   if (valEmail && valPass) {
-                    Get.to(ButtomNavBar());
+                    loginController.signIn();
+                    
                   }
                   ;
                 },
