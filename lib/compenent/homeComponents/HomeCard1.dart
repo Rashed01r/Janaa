@@ -1,3 +1,4 @@
+import 'package:final_project/compenent/bottomSheet.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 
@@ -147,7 +148,7 @@ class MyCard extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(left: 100.0),
                           child: LikeButton(),
-                        )
+                        ),
                       ],
                     ),
                   ),

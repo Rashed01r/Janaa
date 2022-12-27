@@ -1,6 +1,7 @@
 import 'package:final_project/compenent/ButtomNav.dart';
 import 'package:final_project/compenent/textFiledCoustom.dart';
 import 'package:final_project/controller/loginController.dart';
+import 'package:final_project/view/ReSentPass.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -65,7 +66,6 @@ class LoginPage extends StatelessWidget {
 
                   if (valEmail && valPass) {
                     loginController.signIn();
-                    
                   }
                   ;
                 },
@@ -81,7 +81,11 @@ class LoginPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 235, right: 40),
-            child: InkWell(onTap: () {}, child: Text("9".tr)),
+            child: InkWell(
+                onTap: () {
+                  Get.to(() => ReSentPass());
+                },
+                child: Text("9".tr)),
           )
         ],
       )),

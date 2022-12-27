@@ -9,7 +9,7 @@ class LoginController extends GetxController {
 
   Future signIn() async {
     try {
-      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailCon.text.trim(), password: passCon.text.trim());
       Get.to(ButtomNavBar());
     } on FirebaseAuthException catch (e) {
