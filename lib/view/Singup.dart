@@ -1,18 +1,23 @@
 import 'package:final_project/compenent/textFiledCoustom.dart';
 import 'package:final_project/compenent/textFiledPass.dart';
 import 'package:final_project/controller/SingupControler.dart';
+import 'package:final_project/controller/gelcotor.dart';
 import 'package:final_project/controller/loginController.dart';
 import 'package:final_project/view/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SingUp extends StatelessWidget {
   SingUp({
     super.key,
+
+   
   });
 
   SingUpController singUpController = Get.put(SingUpController());
+  Geloctor geloctor = Geloctor();
 
   final _email = GlobalKey<FormState>();
   final _pass = GlobalKey<FormState>();
@@ -135,6 +140,7 @@ class SingUp extends StatelessWidget {
                   color: Color(0xff1F61C3)),
               child: TextButton(
                   onPressed: () {
+                    print(geloctor.listofeventes().toString()); 
                     var valEmail = _email.currentState!.validate();
                     var valPass = _pass.currentState!.validate();
                     var valfirst = _FirstName.currentState!.validate();

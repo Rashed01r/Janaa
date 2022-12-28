@@ -18,7 +18,7 @@ class HomeCard3 extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width / 2 + 170,
-          height: (MediaQuery.of(context).size.height / 7) + 20,
+          height: (MediaQuery.of(context).size.height / 7) + 35,
           child: Card(
             margin: EdgeInsets.zero,
             elevation: 2,
@@ -42,7 +42,7 @@ class HomeCard3 extends StatelessWidget {
                             height:
                             (MediaQuery.of(context).size.height / 7) + 10,
                             width: MediaQuery.of(context).size.width + 50,
-                            child: Column(
+                            child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(2.0),
@@ -64,32 +64,35 @@ class HomeCard3 extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 134, right: 133),
+                                      left: 134, right: 146),
                                   child: Column(
                                     children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "72".tr,
-                                            style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color(0xff1F61C3)),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                            BorderRadius.circular(12),
-                                            child:
-                                            Image.asset("images/pin 1.png"),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              "72".tr,
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0xff1F61C3)),
+                                            ),
+                                            ClipRRect(
+                                              borderRadius:
+                                              BorderRadius.circular(12),
+                                              child:
+                                              Image.asset("images/pin 1.png"),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 55.0, right: 20),
+                                      left: 55.0, right: 40),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -108,7 +111,7 @@ class HomeCard3 extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding:
-                                  const EdgeInsets.fromLTRB(8.0, 0, 124, 0),
+                                  const EdgeInsets.fromLTRB(00, 0, 220, 0),
                                   child: Row(
                                     children: [
                                       Padding(

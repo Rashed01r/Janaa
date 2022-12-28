@@ -5,6 +5,8 @@ import 'package:final_project/compenent/homeComponents/upcoming.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controller/gelcotor.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -14,12 +16,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String dropdownvalue = 'مكة';
-  var itemsCity = ['الرياض','مكة',
-  'جدة',
-  'المدينة',
-    'الدمام',
-  ];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,37 +28,18 @@ class _HomeState extends State<Home> {
           elevation: 0,
           backgroundColor: Color.fromARGB(0, 255, 255, 255)),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(
-            // child: Row(
-            //   children: [
-            //     Icon(Icons.arrow_drop_down),
-            //     Text('72'.tr,style: TextStyle(fontWeight: FontWeight.bold,)),
-            //   ],
-            // ),
-            child: DropdownButton<String>(
-
-              value: dropdownvalue,
-              icon: Icon(Icons.keyboard_arrow_down),
-              items: itemsCity.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(
-                    value,
-                    style: TextStyle(fontSize: 16,
-                        fontWeight: FontWeight.w800
-                    ),
-                  ),
-                );
-              }).toList(),
-              // Step 5.
-              onChanged: (String? newValue) {
-                setState(() {
-                  dropdownvalue = newValue!;
-                });
-              },
-            ),
-          ),
+          
+              Padding(padding: EdgeInsets.symmetric(horizontal: 140),
+                child: Row(
+                children: [
+                 Icon(Icons.place),
+                 Text(box.read("ryadh").toString(),style: TextStyle(fontWeight: FontWeight.bold,)),
+                 ],
+             
+                ),
+              ),SizedBox(height: 10,),
           Stack(
             children: [
               Center(

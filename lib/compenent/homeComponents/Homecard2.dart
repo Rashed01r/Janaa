@@ -1,3 +1,4 @@
+import 'package:final_project/controller/gelcotor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:like_button/like_button.dart';
@@ -26,7 +27,7 @@ class Homecard2 extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width / 2 + 170,
-          height: (MediaQuery.of(context).size.height / 7) + 20,
+          height: (MediaQuery.of(context).size.height / 7) + 30,
           child: Card(
             margin: EdgeInsets.zero,
             elevation: 2,
@@ -48,7 +49,7 @@ class Homecard2 extends StatelessWidget {
                               color: Color.fromARGB(255, 255, 255, 255),
                             ),
                             height:
-                                (MediaQuery.of(context).size.height / 7) + 10,
+                                (MediaQuery.of(context).size.height / 8) + 10,
                             width: MediaQuery.of(context).size.width + 50,
                             child: Column(
                               children: [
@@ -70,31 +71,7 @@ class Homecard2 extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                           color: Color(0xff1F61C3))),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 178, right: 150),
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "72".tr,
-                                            style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color(0xff1F61C3)),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(12),
-                                            child:
-                                                Image.asset("images/pin 1.png"),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                                
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 55.0, right: 20),
