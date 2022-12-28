@@ -1,5 +1,8 @@
+import 'package:final_project/controller/Editeprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../view/editeprofile.dart';
 
 class UserDataInfo extends StatefulWidget {
   UserDataInfo({super.key, required this.name, required this.phone});
@@ -17,7 +20,9 @@ class _UserDataInfoState extends State<UserDataInfo> {
     return Row(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.to(EditeProfail());
+          },
           child: Image.asset(
             "images/edit.jpg",
             width: 24,

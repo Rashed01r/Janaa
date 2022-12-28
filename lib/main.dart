@@ -6,6 +6,7 @@ import 'package:final_project/view/LoginPage.dart';
 import 'package:final_project/view/PlacesPage.dart';
 import 'package:final_project/view/ProfilePage.dart';
 import 'package:final_project/view/Singup.dart';
+import 'package:final_project/view/editeprofile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,
       translations: MyLocale(),
-      home: Home(),
+      home: ButtomNavBar(),
     );
   }
 }
