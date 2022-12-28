@@ -9,6 +9,8 @@ import 'package:get/get.dart';
 
 import '../controller/gelcotor.dart';
 
+
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -18,11 +20,13 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
+  Geloctor geloctor = Get.put(Geloctor());
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     homeController.setItem();
+    geloctor.getoPstion();
   }
 
   @override
@@ -43,8 +47,9 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
+       
                 Icon(Icons.place),
-                Text(box.read("ryadh").toString(),
+                Text("${box.read("city")}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     )),

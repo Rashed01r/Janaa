@@ -88,7 +88,8 @@ class MyLocale extends Translations {
           "80": "المفضلة",
           "81": "الانشطة",
           "82" : "رقم الجوال",
-          "84" : "حفظ التغيرات "
+          "84" : "حفظ التغيرات ",
+          "85" : "تغير اللغة"
 
         },
         "en": {
@@ -174,7 +175,9 @@ class MyLocale extends Translations {
           "80": "Favorite",
           "81": "Events",
           "83" :"phone number",
-          "84" : "Save changes"
+          "84" : "Save changes",
+          "85" : "change the language " ,
+          
         }
       };
 }
