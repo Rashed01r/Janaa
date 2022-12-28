@@ -88,6 +88,8 @@ class MyLocale extends Translations {
           "80": "المفضلة",
           "81": "الانشطة",
           "82" : "رقم الجوال",
+          "84" : "حفظ التغيرات "
+
         },
         "en": {
           "1": "JANNAH is more fun if you create an account",
@@ -172,6 +174,7 @@ class MyLocale extends Translations {
           "80": "Favorite",
           "81": "Events",
           "83" :"phone number",
+          "84" : "Save changes"
         }
       };
 }

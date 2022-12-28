@@ -56,7 +56,7 @@ class MyCard extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20)),
                             width: 200,
                             height:
-                                (MediaQuery.of(context).size.height / 3) + 5,
+                                (MediaQuery.of(context).size.height / 3) - 15,
                           ),
                         ),
                         Padding(
@@ -108,7 +108,7 @@ class MyCard extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text("${destance!}KM",
+                                        Text("${destance!}KM Away",
                                             style: TextStyle(
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.bold,
