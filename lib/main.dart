@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,
       translations: MyLocale(),
-      home: ButtomNavBar(),
+      home:SingUp(),
     );
   }
 }
