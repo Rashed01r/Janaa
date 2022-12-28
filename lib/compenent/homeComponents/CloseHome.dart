@@ -1,4 +1,5 @@
 import 'package:final_project/controller/gelcotor.dart';
+import 'package:final_project/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +8,7 @@ import 'HomeCard1.dart';
 
 class Closetoyou extends StatelessWidget {
   Closetoyou({super.key});
-  Geloctor geloctor = Geloctor(); 
+  Geloctor geloctor = Geloctor();
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -40,7 +41,7 @@ class Closetoyou extends StatelessWidget {
                     ))),
                 child: Container(
                   width: (MediaQuery.of(context).size.width / 3) + 60,
-                  height: (MediaQuery.of(context).size.height / 2) - 135,
+                  height: (MediaQuery.of(context).size.height / 2) - 130,
                   child: MyCard(
                     imagepath: "images/زيزو.png",
                     NameAr: " فعالية سبتات للفتيات",
@@ -73,12 +74,12 @@ class Closetoyou extends StatelessWidget {
                     ))),
                 child: Container(
                   width: (MediaQuery.of(context).size.width / 3) + 60,
-                  height: (MediaQuery.of(context).size.height / 2) - 135,
+                  height: (MediaQuery.of(context).size.height / 2) - 130,
                   child: MyCard(
                     imagepath: "images/قدوتي.png",
                     NameAr: "قدوتي",
                     NameEN: " My role model",
-                    destance: geloctor.destansebtween(46.671929,24.750988),
+                    destance: geloctor.destansebtween(46.671929, 24.750988),
                     price: 390,
                     oldPrice: 900,
                   ),
@@ -116,12 +117,12 @@ class Closetoyou extends StatelessWidget {
                       ))),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 135,
+                    height: (MediaQuery.of(context).size.height / 2) - 130,
                     child: MyCard(
                       imagepath: "images/زيزو.png",
                       NameAr: "عالم زيزو",
                       NameEN: "Zizou World ",
-                      destance: geloctor.destansebtween( 46.677045,24.831885),
+                      destance: geloctor.destansebtween(46.677045, 24.831885),
                       price: 90,
                       oldPrice: 190,
                     ),
@@ -151,12 +152,12 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 135,
+                    height: (MediaQuery.of(context).size.height / 2) - 130,
                     child: MyCard(
                       imagepath: "images/مخيم شتوي.png",
                       NameAr: " مخيم شتوي",
                       NameEN: "Winter camp",
-                      destance: geloctor.destansebtween( 46.646077,24.822970),
+                      destance: geloctor.destansebtween(46.646077, 24.822970),
                       price: 570,
                       oldPrice: 700,
                     ),
@@ -200,13 +201,12 @@ class Closetoyou extends StatelessWidget {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(8)),
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 135,
+                    height: (MediaQuery.of(context).size.height / 2) - 130,
                     child: MyCard(
                       imagepath: "images/قضاء الاجازة.png",
                       NameAr: " قضاء الاجازة",
                       NameEN: "vacation",
-                      destance: 
-                      geloctor.destansebtween(46.661926,24.811112),
+                      destance: geloctor.destansebtween(46.661926, 24.811112),
                       price: 550,
                       oldPrice: 800,
                     ),
@@ -237,12 +237,12 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 135,
+                    height: (MediaQuery.of(context).size.height / 2) - 130,
                     child: MyCard(
                       imagepath: "images/نشطة رياضية.png",
                       NameAr: "أنشطة رياضية",
                       NameEN: "Sports",
-                      destance:  geloctor.destansebtween( 46.797815,24.860293),
+                      destance: geloctor.destansebtween(46.797815, 24.860293),
                       price: 200,
                       oldPrice: 100,
                     ),
