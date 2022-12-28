@@ -1,3 +1,5 @@
+import 'package:final_project/controller/ProfilePageController.dart';
+import 'package:final_project/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
@@ -13,6 +15,14 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  ProfilePageController _pageController = Get.put(ProfilePageController());
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController.getInfoUser();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -37,8 +47,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 InkWell(
                   onTap: () {},
                   child: UserDataInfo(
-                    name: 'رهف الشهرانى',
-                    phone: '+966539300197',
+                    name: "${box.read("email")}",
+                    phone: "${box.read("email")}",
                   ),
                 ),
                 SizedBox(
