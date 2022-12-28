@@ -1,3 +1,4 @@
+import 'package:final_project/main.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:geolocator/geolocator.dart';
@@ -6,16 +7,13 @@ import 'package:get_storage/get_storage.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geocoding/geocoding.dart';
 
-final box = GetStorage();
-
-
 class Geloctor extends GetxController {
   bool? geloctorrsevices;
   LocationPermission? prmssion;
   Position? Curnetpostion;
   double? lang;
   double? latd;
-  final box = GetStorage();
+
   getoPstion() async {
     geloctorrsevices = await Geolocator.isLocationServiceEnabled();
     prmssion = await Geolocator.checkPermission();
@@ -42,8 +40,6 @@ class Geloctor extends GetxController {
         await placemarkFromCoordinates(24.860293, 46.797815);
 
     box.write("ryadh", plac[0].administrativeArea.toString());
-   
-    
   }
 
   @override

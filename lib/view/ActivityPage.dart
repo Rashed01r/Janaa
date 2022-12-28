@@ -17,7 +17,7 @@ class _ActivityPageState extends State<ActivityPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(right: 12),
+          padding: const EdgeInsets.only(right: 1),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -50,8 +50,10 @@ class _ActivityPageState extends State<ActivityPage> {
                                   month: 1,
                                   day: 1,
                                   nameCompany: "أكاديمية المحترف".tr,
-                                  nameActivity:  'أنشطة رياضية'.tr,
-                                  activityDetails: "كرة قدم وكاراتيه وأنشطة حركية ورياضية".tr,
+                                  nameActivity: 'أنشطة رياضية'.tr,
+                                  activityDetails:
+                                      "كرة قدم وكاراتيه وأنشطة حركية ورياضية"
+                                          .tr,
                                   dateActivity: "اسبوع الاجازة".tr,
                                   timeActivity: " من 3:45 الى 4:45".tr,
                                   city: "الرياض".tr,
@@ -88,11 +90,13 @@ class _ActivityPageState extends State<ActivityPage> {
                                   day: 1,
                                   nameCompany: "قدوة للتدريب  ",
                                   nameActivity: "فعالية سبتات للفتيات".tr,
-                                  activityDetails: "فعالية تقام يوم السبت فيها تأمل وكشتة وأنشطة مرحة للفتيات من عمر 10-15 عام",
+                                  activityDetails:
+                                      "فعالية تقام يوم السبت فيها تأمل وكشتة وأنشطة مرحة للفتيات من عمر 10-15 عام",
                                   dateActivity: "1444/06/08",
                                   timeActivity: " من 3:30 الى 6:30",
                                   city: "الرياض",
-                                  locationActivity: "دار هيا النسائية - حي الملقا",
+                                  locationActivity:
+                                      "دار هيا النسائية - حي الملقا",
                                   shareActivity: "test",
                                   latitude: 24.8540300,
                                   longitude: 46.7127014,
@@ -127,11 +131,13 @@ class _ActivityPageState extends State<ActivityPage> {
                                   day: 1,
                                   nameCompany: " نجباء  ",
                                   nameActivity: "قدوتي",
-                                  activityDetails: "مبادرة تهدف إلى غرس تطبيق الهدي النبوي في نفوس الأطفال وتعريفهم بسيرته عليه الصلاة والسلام",
+                                  activityDetails:
+                                      "مبادرة تهدف إلى غرس تطبيق الهدي النبوي في نفوس الأطفال وتعريفهم بسيرته عليه الصلاة والسلام",
                                   dateActivity: "من 5/28 الى 7/11",
                                   timeActivity: " من 3:30 الى 7:30",
                                   city: "الرياض",
-                                  locationActivity: "مركز الرسالة - حي الملك فهد",
+                                  locationActivity:
+                                      "مركز الرسالة - حي الملك فهد",
                                   shareActivity: "test",
                                   latitude: 24.8540300,
                                   longitude: 46.7127014,
@@ -156,13 +162,15 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/WhatsApp Image 2022-12-23 at 5.22.38 AM.jpeg"),
+                                  image:
+                                      ("images/WhatsApp Image 2022-12-23 at 5.22.38 AM.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
                                   nameCompany: "Avalley SA   ",
                                   nameActivity: "هايك الأطفال".tr,
-                                  activityDetails: " رحلة للأطفال لممارسة رياضة الهايكنق",
+                                  activityDetails:
+                                      " رحلة للأطفال لممارسة رياضة الهايكنق",
                                   dateActivity: "24/12/2022",
                                   timeActivity: " من 3:00 الى 6:00",
                                   city: "الرياض",
@@ -199,9 +207,11 @@ class _ActivityPageState extends State<ActivityPage> {
                                   year: 2024,
                                   month: 1,
                                   day: 1,
-                                  nameCompany: " مركز يوم الطفل لضيافة الاطفال  ",
+                                  nameCompany:
+                                      " مركز يوم الطفل لضيافة الاطفال  ",
                                   nameActivity: "برنامج ترفيهي",
-                                  activityDetails: "برنامج ترفيهي باشتراك شهري أو اسبوعي وصالات خارجية وألعاب",
+                                  activityDetails:
+                                      "برنامج ترفيهي باشتراك شهري أو اسبوعي وصالات خارجية وألعاب",
                                   dateActivity: "طوال السنة",
                                   timeActivity: "-",
                                   city: "الرياض",
@@ -220,27 +230,30 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '200',
                             Finalprice: '100',
                             ActivityImage: Image.asset(
-                             "images/برنامج ترفيهي.png",
+                              "images/برنامج ترفيهي.png",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
                             ),
                           ),
                         ),
-                       InkWell(
+                        InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/WhatsApp Image 2022-12-23 at 4.29 1.png"),
+                                  image:
+                                      ("images/WhatsApp Image 2022-12-23 at 4.29 1.png"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
                                   nameCompany: " جمعية التنمية الاهلية   ",
                                   nameActivity: "متابعة دراسية   ".tr,
-                                  activityDetails:  " متابعة دراسية للحقيبة الكاملة لطلاب الابتدائي",
+                                  activityDetails:
+                                      " متابعة دراسية للحقيبة الكاملة لطلاب الابتدائي",
                                   dateActivity: "طوال السنة ",
                                   timeActivity: " من 4:00 الى 6:00",
                                   city: "الرياض",
-                                  locationActivity: " جمعية التنمية الاهلية  - حي المروج",
+                                  locationActivity:
+                                      " جمعية التنمية الاهلية  - حي المروج",
                                   shareActivity: "test",
                                   latitude: 24.8540300,
                                   longitude: 46.7127014,
@@ -250,7 +263,7 @@ class _ActivityPageState extends State<ActivityPage> {
                           },
                           child: CustomContainer(
                             ActivityNameEng: 'Study follow-up',
-                            ActivityNameAra:  "متابعة دراسية   ",
+                            ActivityNameAra: "متابعة دراسية   ",
                             City: 'Ryiadh',
                             Firstprice: '1400',
                             Finalprice: '1300',
@@ -279,7 +292,8 @@ class _ActivityPageState extends State<ActivityPage> {
                                   dateActivity: "Winter Season",
                                   timeActivity: " من 3:30 الى 6:30",
                                   city: "الرياض",
-                                  locationActivity: "طريق عثمان بن عفان، الفلاح، الرياض",
+                                  locationActivity:
+                                      "طريق عثمان بن عفان، الفلاح، الرياض",
                                   shareActivity: "test",
                                   latitude: 24.8540300,
                                   longitude: 46.7127014,
@@ -289,7 +303,7 @@ class _ActivityPageState extends State<ActivityPage> {
                           },
                           child: CustomContainer(
                             ActivityNameEng: 'winter camp',
-                            ActivityNameAra:  "معسكر شتاء",
+                            ActivityNameAra: "معسكر شتاء",
                             City: 'Ryiadh',
                             Firstprice: '900',
                             Finalprice: '800',
@@ -301,7 +315,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             ),
                           ),
                         ),
-                       InkWell(
+                        InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
                                   image: ("images/مخيم ضياء الطفولة.png"),
@@ -363,7 +377,7 @@ class _ActivityPageState extends State<ActivityPage> {
                           },
                           child: CustomContainer(
                             ActivityNameEng: 'winter camp',
-                            ActivityNameAra:"مخيم شتوي",
+                            ActivityNameAra: "مخيم شتوي",
                             City: 'Ryiadh',
                             Firstprice: '570',
                             Finalprice: '470',
@@ -384,11 +398,13 @@ class _ActivityPageState extends State<ActivityPage> {
                                   day: 1,
                                   nameCompany: "خطوات النمو ",
                                   nameActivity: "قضاء الاجازة".tr,
-                                  activityDetails: " عمال يدوية مثل الفخار ونشاط الطاهي الصغير",
+                                  activityDetails:
+                                      " عمال يدوية مثل الفخار ونشاط الطاهي الصغير",
                                   dateActivity: "1444/06/08",
-                                  timeActivity:" من 6:30 ص الى 4:30",
+                                  timeActivity: " من 6:30 ص الى 4:30",
                                   city: "الرياض",
-                                  locationActivity: "مركز المدارس بالرياض   -  الياسمين",
+                                  locationActivity:
+                                      "مركز المدارس بالرياض   -  الياسمين",
                                   shareActivity: "test",
                                   latitude: 24.8540300,
                                   longitude: 46.7127014,
