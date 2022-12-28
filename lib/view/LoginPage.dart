@@ -1,5 +1,6 @@
 import 'package:final_project/compenent/ButtomNav.dart';
 import 'package:final_project/compenent/textFiledCoustom.dart';
+import 'package:final_project/controller/ProfilePageController.dart';
 import 'package:final_project/controller/loginController.dart';
 import 'package:final_project/view/ReSentPass.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   LoginController loginController = Get.put(LoginController());
+  ProfilePageController pageController = Get.put(ProfilePageController());
 
   final _email = GlobalKey<FormState>();
   final _pass = GlobalKey<FormState>();
@@ -66,6 +68,7 @@ class LoginPage extends StatelessWidget {
 
                   if (valEmail && valPass) {
                     loginController.signIn();
+                    pageController.getInfoUser();
                   }
                   ;
                 },

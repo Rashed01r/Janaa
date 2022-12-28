@@ -13,16 +13,18 @@ class SingUpController extends GetxController {
   final phone = TextEditingController();
 
   Future signUp() async {
+    final uid = await FirebaseAuth.instance.currentUser?.uid;
+    var fireStore = await FirebaseFirestore.instance;
+
     try {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailCon.text.trim(),
         password: passCon.text.trim(),
       );
-      CollectionReference collectionReference =
-          FirebaseFirestore.instance.collection("Users");
-      collectionReference.add({
-        "First Name": "${FnameCon.text}",
-        "Last Name": "${LNameCon.text}",
+
+      fireStore.collection("Users").doc(uid).set({
+        "First_Name": "${FnameCon.text}",
+        "Last_Name": "${LNameCon.text}",
         "Phone": "${phone.text}",
         "Email": "${emailCon.text}",
         "Password": "${passCon.text}",
