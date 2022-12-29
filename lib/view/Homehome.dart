@@ -15,7 +15,6 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
-
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
   Geloctor geloctor = Get.put(Geloctor());
@@ -38,8 +37,9 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
+       
                 Icon(Icons.place),
-                Text(box.read("ryadh").toString(),
+                Text("${box.read("city")}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     )),

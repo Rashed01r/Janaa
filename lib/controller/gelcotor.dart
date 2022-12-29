@@ -1,11 +1,13 @@
-import 'package:final_project/main.dart';
+
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geocoding/geocoding.dart';
+
+import '../main.dart';
 
 class Geloctor extends GetxController {
   bool? geloctorrsevices;
@@ -35,11 +37,8 @@ class Geloctor extends GetxController {
 // city location
     List<Placemark> plac = await placemarkFromCoordinates(24.653009, 46.726095);
 
-    //events loction
-    List<Placemark> placeNweCard =
-        await placemarkFromCoordinates(24.860293, 46.797815);
-
-    box.write("ryadh", plac[0].administrativeArea.toString());
+    print("${plac[0].administrativeArea}");
+    box.write("city", "${plac[0].administrativeArea}"); 
   }
 
   @override
