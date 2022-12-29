@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
     // TODO: implement initState
     super.initState();
     homeController.setItem();
-    geloctor.getoPstion();
+    
   }
 
   @override

@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: controler.initlang,
       translations: MyLocale(),
-      home: ChangeLAng(),
+      home: Singup(),
     );
   }
 }
