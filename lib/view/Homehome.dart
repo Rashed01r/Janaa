@@ -9,19 +9,15 @@ import 'package:get/get.dart';
 
 import '../controller/gelcotor.dart';
 
-
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
 }
-
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
   Geloctor geloctor = Get.put(Geloctor());
-  
 
   @override
   Widget build(BuildContext context) {
