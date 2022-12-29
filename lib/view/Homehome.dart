@@ -19,11 +19,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
   Geloctor geloctor = Get.put(Geloctor());
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
