@@ -11,7 +11,7 @@ class HomeController extends GetxController {
   Future setItem() async {
     var r = fireStore.doc().set({
       "imagepath": "images/سبتات للفتيات.png",
-      "NameAr": " فعالية سبتات للفتيات",
+      //"NameAr": " فعالية سبتات للفتيات",
       "NameEN": "Saturdays event for girls",
       "destance": 50,
       "price": 20,
@@ -22,7 +22,7 @@ class HomeController extends GetxController {
       "year": 2022,
       "month": 6,
       "day": 17,
-      "image": "images/سبتات للفتيات.png",
+     // "image": "images/سبتات للفتيات.png",
       "nameCompany": "قدوة للتدريب",
       "nameActivity": "فعالية سبتات للفتيات",
       "activityDetails":

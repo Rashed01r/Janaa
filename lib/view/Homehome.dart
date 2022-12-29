@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
   void initState() {
     // TODO: implement initState
     super.initState();
-  //  homeController.setItem();
+    //  homeController.setItem();
   }
 
   @override
@@ -44,11 +44,6 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
-                TextButton(
-                    onPressed: () async {
-                      await geloctor.getoPstion();
-                    },
-                    child: Text("")),
                 Icon(Icons.place),
                 Text(box.read("ryadh").toString(),
                     style: TextStyle(
