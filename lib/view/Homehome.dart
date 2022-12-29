@@ -23,7 +23,6 @@ class _HomeState extends State<Home> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    //  homeController.setItem();
   }
 
   @override
