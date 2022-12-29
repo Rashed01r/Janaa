@@ -29,11 +29,10 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
- WidgetsFlutterBinding.ensureInitialized(); 
+  WidgetsFlutterBinding.ensureInitialized();
 
   sharepref = await SharedPreferences.getInstance();
 
-  
   runApp(const MyApp());
 }
 
@@ -42,7 +41,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     LangControler controler = Get.put(LangControler());
+    LangControler controler = Get.put(LangControler());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       locale: controler.initlang,

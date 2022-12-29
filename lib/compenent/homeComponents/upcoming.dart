@@ -19,7 +19,7 @@ class Upcoming extends StatelessWidget {
                   width: (MediaQuery.of(context).size.width),
                   height: (MediaQuery.of(context).size.height / 2) - 200,
                   child: HomeCard3(
-                    imagepath: "images/قدوتي.png",
+                    imagepath: "images/قدوتي.jpeg",
                     Agerange: "5-14",
                     NameAr: "قدوتي",
                     NameEN: " My role model",
@@ -47,7 +47,8 @@ class Upcoming extends StatelessWidget {
                   width: (MediaQuery.of(context).size.width),
                   height: (MediaQuery.of(context).size.height / 2) - 200,
                   child: HomeCard3(
-                    imagepath: "images/WhatsApp Image 2022-12-23 at 4.29 1.png",
+                    imagepath:
+                        "images/WhatsApp Image 2022-12-23 at 4.29 1.jpeg",
                     Agerange: "7-17",
                     NameAr: "متابعة دراسية",
                     NameEN: "Study follow-up",
@@ -65,7 +66,7 @@ class Upcoming extends StatelessWidget {
                   width: (MediaQuery.of(context).size.width),
                   height: (MediaQuery.of(context).size.height / 2) - 200,
                   child: HomeCard3(
-                    imagepath: "images/معسكر شتاء.png",
+                    imagepath: "images/معسكر شتاء.jpeg",
                     Agerange: "9-15",
                     NameAr: "معسكر شتاء",
                     NameEN: " Winter Camp",
@@ -75,7 +76,7 @@ class Upcoming extends StatelessWidget {
                   width: (MediaQuery.of(context).size.width),
                   height: (MediaQuery.of(context).size.height / 2) - 200,
                   child: HomeCard3(
-                    imagepath: "images/مخيم ضياء الطفولة.png",
+                    imagepath: "images/مخيم ضياء الطفولة.jpeg",
                     Agerange: "4-7",
                     NameAr: "ضياءالطفولة",
                     NameEN: "Diaa Al-Tofula Camp",

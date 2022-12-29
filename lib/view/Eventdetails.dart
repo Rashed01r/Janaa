@@ -61,7 +61,7 @@ class EventDetails extends StatelessWidget {
                     children: [
                       Image.asset(
                         "$image",
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fitWidth,
                       ),
                       Container(
                         height: 50,
