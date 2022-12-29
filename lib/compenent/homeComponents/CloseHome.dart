@@ -1,4 +1,5 @@
 import 'package:final_project/controller/gelcotor.dart';
+import 'package:final_project/controller/home_controller.dart';
 import 'package:final_project/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,7 @@ import 'HomeCard1.dart';
 class Closetoyou extends StatelessWidget {
   Closetoyou({super.key});
   Geloctor geloctor = Geloctor();
+  HomeController homeController = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -19,39 +21,74 @@ class Closetoyou extends StatelessWidget {
           ),
           Row(
             children: [
-              InkWell(
-                onTap: (() => Get.to(() => EventDetails(
-                      image: ("images/سبتات للفتيات.png"),
-                      year: 2024,
-                      month: 1,
-                      day: 1,
-                      nameCompany: "قدوة للتدريب  ",
-                      nameActivity: "فعالية سبتات للفتيات".tr,
-                      activityDetails:
-                          "فعالية تقام يوم السبت فيها تأمل وكشتة وأنشطة مرحة للفتيات من عمر 10-15 عام",
-                      dateActivity: "1444/06/08",
-                      timeActivity: " من 3:30 الى 6:30",
-                      city: "الرياض",
-                      locationActivity: "دار هيا النسائية - حي الملقا",
-                      shareActivity: "test",
-                      latitude: 24.8540300,
-                      longitude: 46.7127014,
-                      titleLocation: "test",
-                      phoneNumber: "0571385770",
-                    ))),
-                child: Container(
-                  width: (MediaQuery.of(context).size.width / 3) + 60,
-                  height: (MediaQuery.of(context).size.height / 2) - 130,
-                  child: MyCard(
-                    imagepath: "images/زيزو.png",
-                    NameAr: " فعالية سبتات للفتيات",
-                    NameEN: "Saturdays event for girls",
-                    destance: 3,
-                    price: 120,
-                    oldPrice: 150,
-                  ),
-                ),
-              ),
+              FutureBuilder(
+                  future: homeController.itme.get(),
+                  builder: ((context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return CircularProgressIndicator();
+                    }
+                    return Container(
+                      width: (MediaQuery.of(context).size.width / 3) + 60,
+                      height: (MediaQuery.of(context).size.height / 2) - 110,
+                      child: InkWell(
+                        onTap: (() {
+                          Get.to(() => FutureBuilder(
+                                future: homeController.itmeDetalis.get(),
+                                builder: (context, snapshot) {
+                                  if (snapshot.hasData) {
+                                    return EventDetails(
+                                        image:
+                                            "${snapshot.data?.docs[0]['image']}",
+                                        year: snapshot.data?.docs[0]['year'],
+                                        month: snapshot.data?.docs[0]['month'],
+                                        day: snapshot.data?.docs[0]['day'],
+                                        nameCompany:
+                                            "${snapshot.data?.docs[0]['nameCompany']}",
+                                        nameActivity:
+                                            "${snapshot.data?.docs[0]['nameActivity']}",
+                                        activityDetails:
+                                            "${snapshot.data?.docs[0]['activityDetails']}",
+                                        dateActivity:
+                                            "${snapshot.data?.docs[0]['dateActivity']}",
+                                        timeActivity:
+                                            "${snapshot.data?.docs[0]['timeActivity']}",
+                                        city:
+                                            "${snapshot.data?.docs[0]['city']}",
+                                        locationActivity:
+                                            "${snapshot.data?.docs[0]['locationActivity']}",
+                                        shareActivity:
+                                            "${snapshot.data?.docs[0]['shareActivity']}",
+                                        latitude: snapshot.data?.docs[0]
+                                            ['latitude'],
+                                        longitude: snapshot.data?.docs[0]
+                                            ['longitude'],
+                                        titleLocation:
+                                            "${snapshot.data?.docs[0]['titleLocation']}",
+                                        phoneNumber:
+                                            "${snapshot.data?.docs[0]['phoneNumber']}");
+                                  }
+                                  if (snapshot.hasError) {
+                                    return Text("Error");
+                                  }
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return CircularProgressIndicator();
+                                  }
+                                  return Text("1");
+                                },
+                              ));
+                        }),
+                        child: MyCard(
+                          imagepath: "${snapshot.data?.docs[0]['imagepath']}",
+                          NameAr: "${snapshot.data?.docs[0]['NameAr']}",
+                          NameEN: "${snapshot.data?.docs[0]['NameEN']}",
+                          destance: snapshot.data?.docs[0]['destance'],
+                          price: snapshot.data?.docs[0]['price'],
+                          oldPrice: snapshot.data?.docs[0]['oldPrice'],
+                        ),
+                      ),
+                    );
+                  })),
               InkWell(
                 onTap: (() => Get.to(() => EventDetails(
                       image: ("images/قدوتي.png"),

@@ -1,5 +1,8 @@
 import 'package:final_project/controller/ProfilePageController.dart';
 import 'package:final_project/main.dart';
+import 'package:final_project/view/LoginPage.dart';
+import 'package:final_project/view/editeprofile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
@@ -44,12 +47,21 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 18,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: UserDataInfo(
-                    name: "${box.read("email")}",
-                    phone: "${box.read("email")}",
-                  ),
+                FutureBuilder(
+                  future: _pageController.users.get(),
+                  builder: (context, snapshot) {
+                    return InkWell(
+                      onTap: () async {
+                        await FirebaseAuth.instance.signOut();
+
+                        Get.offAll(() => LoginPage());
+                      },
+                      child: UserDataInfo(
+                        name: "${snapshot.data?.docs[0]['First_Name']}",
+                        phone: "${snapshot.data?.docs[0]['Email']}",
+                      ),
+                    );
+                  },
                 ),
                 SizedBox(
                   height: 8,
