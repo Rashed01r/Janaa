@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,
       translations: MyLocale(),
-      home: LoginPage(),
+      home: SingUp(),
     );
   }
 }

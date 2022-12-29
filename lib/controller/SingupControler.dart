@@ -10,7 +10,6 @@ class SingUpController extends GetxController {
   final FnameCon = TextEditingController();
   final LNameCon = TextEditingController();
   final RpassCon = TextEditingController();
-  final phone = TextEditingController();
 
   Future signUp() async {
     final uid = await FirebaseAuth.instance.currentUser?.uid;
@@ -25,7 +24,6 @@ class SingUpController extends GetxController {
       fireStore.collection("Users").doc(uid).set({
         "First_Name": "${FnameCon.text}",
         "Last_Name": "${LNameCon.text}",
-        "Phone": "${phone.text}",
         "Email": "${emailCon.text}",
         "Password": "${passCon.text}",
         "Re-Password": "${RpassCon.text}",

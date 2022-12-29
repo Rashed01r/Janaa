@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class ProfilePageController extends GetxController {
+  CollectionReference users = FirebaseFirestore.instance.collection("Users");
+
   void getInfoUser() async {
     final FirebaseFirestore _firestore = FirebaseFirestore.instance;
     var id = FirebaseAuth.instance.currentUser?.uid;

@@ -1,8 +1,8 @@
-
-
 import 'package:final_project/compenent/bottomSheet.dart';
+import 'package:final_project/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 enum payment { ApplePay, STCpay, MadaCard }
 
 class pay extends StatefulWidget {
@@ -13,6 +13,8 @@ class pay extends StatefulWidget {
 }
 
 class _payState extends State<pay> {
+  HomeController homeController = Get.put(HomeController());
+
   int count = 0;
   payment choose = payment.ApplePay;
 
@@ -30,44 +32,43 @@ class _payState extends State<pay> {
 
   @override
   Widget build(BuildContext context) {
-    int price = 100;
-    int total = count * price;
     return Scaffold(
       body: ListView(children: [
         Column(
           children: [
-             Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               children: [
-                 IconButton(
-                              onPressed: () {
-                                Get.back();
-                              },
-                              icon: Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.black,
-                              )),
-                 Text(
-                      "68".tr,
-                      style: TextStyle(
-                   color: Color(0xffAD557A),
-                   fontSize: 20,
-                   fontWeight: FontWeight.bold),
-                    ),
-                    Text(".",style: TextStyle(color: Colors.white),)
-               ],
-             ),
-                SizedBox(
-                  height: 30,
+              children: [
+                IconButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.black,
+                    )),
+                Text(
+                  "68".tr,
+                  style: TextStyle(
+                      color: Color(0xffAD557A),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
-           
-            
+                Text(
+                  ".",
+                  style: TextStyle(color: Colors.white),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Text(
+                  Text(
                     "63".tr,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
                   ),
@@ -80,7 +81,6 @@ class _payState extends State<pay> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
@@ -113,7 +113,6 @@ class _payState extends State<pay> {
                       ],
                     ),
                   ),
-                 
                 ],
               ),
             ),
@@ -122,29 +121,49 @@ class _payState extends State<pay> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Text(
+                  Text(
                     "64".tr,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
                   ),
                   Container(
                     child: Row(
                       children: [
-                        Text("200SR" ,style: TextStyle(
-                          decoration: TextDecoration.lineThrough,
-                          color: Color(0xff929090),
-                          fontSize: 10),
-                    ),
-                        SizedBox(width: 10,),
-
-                        Text("$price"),
+                        FutureBuilder(
+                          future: homeController.itme.get(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            return Text(
+                              "${snapshot.data?.docs[0]['oldPrice']}",
+                              style: TextStyle(
+                                  decoration: TextDecoration.lineThrough,
+                                  color: Color(0xff929090),
+                                  fontSize: 10),
+                            );
+                          },
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        FutureBuilder(
+                          future: homeController.itme.get(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            return Text("${snapshot.data?.docs[0]['price']}");
+                          },
+                        ),
                       ],
                     ),
                   ),
-                 
                 ],
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -156,92 +175,104 @@ class _payState extends State<pay> {
                   Container(
                     child: Row(
                       children: [
-                         Text("$total"),
+                        FutureBuilder(
+                          future: homeController.itme.get(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            return Text("${snapshot.data?.docs[0]['price']}");
+                          },
+                        ),
                         Text(" SR"),
                       ],
                     ),
                   ),
-                  
                 ],
               ),
             ),
-            Center(child:Container(
+            Center(
+                child: Container(
               color: Colors.black,
               height: 1,
               width: 400,
             )),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                          "66".tr,
-                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
-                        ),
+                    "66".tr,
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+                  ),
                 ],
               ),
             ),
-             Column(
-      children: <Widget>[
-        ListTile(
-          title: Row(
-            children: [
-              Image.asset("images/apple-pay 1.png"),
-              const Text(' ApplePay'),
-            ],
-          ),
-          leading: Radio<payment>(
-            value: payment.ApplePay,
-            groupValue: choose,
-            onChanged: (payment? value) {
-              setState(() {
-                choose = value!;
-              });
-            },
-          ),
-          
-          ),
-           ListTile(
-          title: Row(
-            children: [
-              Image.asset("images/Screenshot_20221223_034900.png",width: 25,height: 25,),
-              const Text(' Mada Card'),
-            ],
-          ),
-          leading: Radio<payment>(
-            value: payment.MadaCard,
-            groupValue: choose,
-            onChanged: (payment? value) {
-              setState(() {
-                choose = value!;
-              });
-            },
-          ),
-          ),
-          ListTile(
-          title: Row(
-            children: [
-              Image.asset("images/Screenshot 1444-05-29 at 2.38 1.png"),
-              const Text(' STCPay'),
-            ],
-          ),
-          leading: Radio<payment>(
-            value: payment.STCpay,
-            groupValue: choose,
-            onChanged: (payment? value) {
-              setState(() {
-                choose = value!;
-              });
-            },
-          ),
-          ),
-          ],
-          
-        ),
-         BottomSheetCustome(label: "67".tr),
-           
+            Column(
+              children: <Widget>[
+                ListTile(
+                  title: Row(
+                    children: [
+                      Image.asset("images/apple-pay 1.png"),
+                      const Text(' ApplePay'),
+                    ],
+                  ),
+                  leading: Radio<payment>(
+                    value: payment.ApplePay,
+                    groupValue: choose,
+                    onChanged: (payment? value) {
+                      setState(() {
+                        choose = value!;
+                      });
+                    },
+                  ),
+                ),
+                ListTile(
+                  title: Row(
+                    children: [
+                      Image.asset(
+                        "images/Screenshot_20221223_034900.png",
+                        width: 25,
+                        height: 25,
+                      ),
+                      const Text(' Mada Card'),
+                    ],
+                  ),
+                  leading: Radio<payment>(
+                    value: payment.MadaCard,
+                    groupValue: choose,
+                    onChanged: (payment? value) {
+                      setState(() {
+                        choose = value!;
+                      });
+                    },
+                  ),
+                ),
+                ListTile(
+                  title: Row(
+                    children: [
+                      Image.asset("images/Screenshot 1444-05-29 at 2.38 1.png"),
+                      const Text(' STCPay'),
+                    ],
+                  ),
+                  leading: Radio<payment>(
+                    value: payment.STCpay,
+                    groupValue: choose,
+                    onChanged: (payment? value) {
+                      setState(() {
+                        choose = value!;
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
+            BottomSheetCustome(label: "67".tr),
           ],
         )
       ]),

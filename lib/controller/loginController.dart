@@ -1,4 +1,5 @@
 import 'package:final_project/compenent/ButtomNav.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,10 +7,9 @@ import 'package:get/get.dart';
 class LoginController extends GetxController {
   final emailCon = TextEditingController();
   final passCon = TextEditingController();
-
   Future signIn() async {
     try {
-       await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailCon.text.trim(), password: passCon.text.trim());
       Get.to(ButtomNavBar());
     } on FirebaseAuthException catch (e) {
