@@ -17,7 +17,7 @@ class _ActivityPageState extends State<ActivityPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(right: 1),
+          padding: const EdgeInsets.only(right: 26, left: 26),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +84,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/سبتات للفتيات.png"),
+                                  image: ("images/سبتات للفتيات.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -111,7 +111,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '120',
                             Finalprice: '100',
                             ActivityImage: Image.asset(
-                              "images/سبتات للفتيات.png",
+                              "images/سبتات للفتيات.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -125,7 +125,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/قدوتي.png"),
+                                  image: ("images/قدوتي.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -152,7 +152,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '390',
                             Finalprice: '100',
                             ActivityImage: Image.asset(
-                              "images/قدوتي.png",
+                              "images/قدوتي.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -203,7 +203,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/برنامج ترفيهي.png"),
+                                  image: ("images/برنامج ترفيهي.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -230,7 +230,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '200',
                             Finalprice: '100',
                             ActivityImage: Image.asset(
-                              "images/برنامج ترفيهي.png",
+                              "images/برنامج ترفيهي.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -241,7 +241,7 @@ class _ActivityPageState extends State<ActivityPage> {
                           onTap: () {
                             Get.to(() => EventDetails(
                                   image:
-                                      ("images/WhatsApp Image 2022-12-23 at 4.29 1.png"),
+                                      ("images/WhatsApp Image 2022-12-23 at 4.29 1.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -268,7 +268,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '1400',
                             Finalprice: '1300',
                             ActivityImage: Image.asset(
-                              "images/WhatsApp Image 2022-12-23 at 4.29 1.png",
+                              "images/WhatsApp Image 2022-12-23 at 4.29 1.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -282,7 +282,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/معسكر شتاء.png"),
+                                  image: ("images/معسكر شتاء.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -308,7 +308,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '900',
                             Finalprice: '800',
                             ActivityImage: Image.asset(
-                              "images/معسكر شتاء.png",
+                              "images/معسكر شتاء.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -318,7 +318,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/مخيم ضياء الطفولة.png"),
+                                  image: ("images/مخيم ضياء الطفولة.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -343,7 +343,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '750',
                             Finalprice: '650',
                             ActivityImage: Image.asset(
-                              "images/مخيم ضياء الطفولة.png",
+                              "images/مخيم ضياء الطفولة.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,
@@ -392,7 +392,7 @@ class _ActivityPageState extends State<ActivityPage> {
                         InkWell(
                           onTap: () {
                             Get.to(() => EventDetails(
-                                  image: ("images/قضاء الاجازة.png"),
+                                  image: ("images/قضاء الاجازة.jpeg"),
                                   year: 2024,
                                   month: 1,
                                   day: 1,
@@ -419,7 +419,7 @@ class _ActivityPageState extends State<ActivityPage> {
                             Firstprice: '550',
                             Finalprice: '450',
                             ActivityImage: Image.asset(
-                              "images/قضاء الاجازة.png",
+                              "images/قضاء الاجازة.jpeg",
                               fit: BoxFit.fill,
                               height: 120,
                               width: 180,

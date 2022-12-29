@@ -14,7 +14,7 @@ class ContainerPlaces extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15),
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: Container(
             height: 124,
             width: 136,
@@ -22,7 +22,7 @@ class ContainerPlaces extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 15, top: 120, right: 15),
+          padding: const EdgeInsets.only(left: 20, top: 95, right: 20),
           child: Container(
             width: 136,
             height: 29,
@@ -34,7 +34,7 @@ class ContainerPlaces extends StatelessWidget {
                     bottomLeft: Radius.circular(15))),
             child: Text(
               "$label".tr,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 12),
             ),
           ),
         ),

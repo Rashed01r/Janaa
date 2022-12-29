@@ -34,7 +34,7 @@ class New extends StatelessWidget {
                       )),
          child: Container(
                        width: (MediaQuery.of(context).size.width),
-                       height: (MediaQuery.of(context).size.height / 2) - 250,
+                       height: (MediaQuery.of(context).size.height / 2) - 230,
                        child: Homecard2(
                           imagepath: "images/مخيم شتوي.png",
                               Agerange: "10-13",

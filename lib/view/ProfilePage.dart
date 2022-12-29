@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
+import '../compenent/EditeLANG.dart';
 import '../compenent/SettingsMenu.dart';
 import '../compenent/userDataInfo.dart';
 
@@ -23,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _pageController.getInfoUser();
+    //_pageController.getInfoUser();
   }
 
   @override
@@ -50,17 +51,26 @@ class _ProfilePageState extends State<ProfilePage> {
                 FutureBuilder(
                   future: _pageController.users.get(),
                   builder: (context, snapshot) {
-                    return InkWell(
-                      onTap: () async {
-                        await FirebaseAuth.instance.signOut();
+                    if (snapshot.hasData) {
+                      return InkWell(
+                        onTap: () async {
+                          await FirebaseAuth.instance.signOut();
 
-                        Get.offAll(() => LoginPage());
-                      },
-                      child: UserDataInfo(
-                        name: "${snapshot.data?.docs[0]['First_Name']}",
-                        phone: "${snapshot.data?.docs[0]['Email']}",
-                      ),
-                    );
+                          Get.offAll(() => LoginPage());
+                        },
+                        child: UserDataInfo(
+                          name: "${snapshot.data?.docs[0]['First_Name']}",
+                          phone: "${snapshot.data?.docs[0]['Email']}",
+                        ),
+                      );
+                    }
+                    if (snapshot.hasData == null) {
+                      return UserDataInfo(
+                        name: "",
+                        phone: "",
+                      );
+                    }
+                    return CircularProgressIndicator();
                   },
                 ),
                 SizedBox(
@@ -122,7 +132,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   title: 'حجوزاتي',
                 ),
                 SettingsMenu(
-                  function: () {},
+                  function: () {
+                    Get.to(() => ChangeLAng());
+                  },
                   icon: 'images/language.jpg',
                   title: 'اللغة',
                 ),

@@ -29,7 +29,7 @@ class Closetoyou extends StatelessWidget {
                     }
                     return Container(
                       width: (MediaQuery.of(context).size.width / 3) + 60,
-                      height: (MediaQuery.of(context).size.height / 2) - 110,
+                      height: (MediaQuery.of(context).size.height / 2) - 90,
                       child: InkWell(
                         onTap: (() {
                           Get.to(() => FutureBuilder(
@@ -91,7 +91,7 @@ class Closetoyou extends StatelessWidget {
                   })),
               InkWell(
                 onTap: (() => Get.to(() => EventDetails(
-                      image: ("images/قدوتي.png"),
+                      image: ("images/قدوتي.jpeg"),
                       year: 2024,
                       month: 1,
                       day: 1,
@@ -111,9 +111,9 @@ class Closetoyou extends StatelessWidget {
                     ))),
                 child: Container(
                   width: (MediaQuery.of(context).size.width / 3) + 60,
-                  height: (MediaQuery.of(context).size.height / 2) - 130,
+                  height: (MediaQuery.of(context).size.height / 2) - 90,
                   child: MyCard(
-                    imagepath: "images/قدوتي.png",
+                    imagepath: "images/قدوتي.jpeg",
                     NameAr: "قدوتي",
                     NameEN: " My role model",
                     destance: geloctor.destansebtween(46.671929, 24.750988),
@@ -154,7 +154,7 @@ class Closetoyou extends StatelessWidget {
                       ))),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/زيزو.png",
                       NameAr: "عالم زيزو",
@@ -189,7 +189,7 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/مخيم شتوي.png",
                       NameAr: " مخيم شتوي",
@@ -216,7 +216,7 @@ class Closetoyou extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () => Get.to(() => EventDetails(
-                        image: ("images/قضاء الاجازة.png"),
+                        image: ("images/قضاء الاجازة.jpeg"),
                         year: 2024,
                         month: 1,
                         day: 1,
@@ -238,9 +238,9 @@ class Closetoyou extends StatelessWidget {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(8)),
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
-                      imagepath: "images/قضاء الاجازة.png",
+                      imagepath: "images/قضاء الاجازة.jpeg",
                       NameAr: " قضاء الاجازة",
                       NameEN: "vacation",
                       destance: geloctor.destansebtween(46.661926, 24.811112),
@@ -274,7 +274,7 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/نشطة رياضية.png",
                       NameAr: "أنشطة رياضية",

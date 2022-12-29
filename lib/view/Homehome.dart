@@ -23,7 +23,8 @@ class _HomeState extends State<Home> {
   void initState() {
     // TODO: implement initState
     super.initState();
-  //  homeController.setItem();
+    geloctor.getoPstion();
+    geloctor.listofeventes();
   }
 
   @override
@@ -44,13 +45,8 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
-                TextButton(
-                    onPressed: () async {
-                      await geloctor.getoPstion();
-                    },
-                    child: Text("")),
                 Icon(Icons.place),
-                Text(box.read("ryadh").toString(),
+                Text("${box.read("city")}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     )),
@@ -58,7 +54,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 5,
           ),
           Stack(
             children: [
@@ -66,7 +62,7 @@ class _HomeState extends State<Home> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 5 - 10,
+                    height: MediaQuery.of(context).size.height / 5 - 8,
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Image.asset(

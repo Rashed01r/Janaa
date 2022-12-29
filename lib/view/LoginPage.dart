@@ -68,7 +68,7 @@ class LoginPage extends StatelessWidget {
 
                   if (valEmail && valPass) {
                     loginController.signIn();
-                    pageController.getInfoUser();
+                   // pageController.getInfoUser();
                   }
                   ;
                 },

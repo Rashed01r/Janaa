@@ -16,9 +16,9 @@ class PlacesPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: ListView(
-        children: [
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: ListView(
+          children: [
             SizedBox(
               height: 25,
             ),
@@ -81,7 +81,9 @@ class PlacesPage extends StatelessWidget {
                               bottomLeft: Radius.circular(15))),
                       child: Text(
                         "22".tr,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -382,9 +384,9 @@ class PlacesPage extends StatelessWidget {
                 ],
               ),
             ),
-        ],
-      ),
-          )),
+          ],
+        ),
+      )),
     );
   }
 }

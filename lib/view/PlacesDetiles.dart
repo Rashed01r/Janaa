@@ -58,7 +58,6 @@ class PlacesDet extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
           Container(
             height: 50,
             width: 400,

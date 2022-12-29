@@ -14,7 +14,6 @@ class pay extends StatefulWidget {
 
 class _payState extends State<pay> {
   HomeController homeController = Get.put(HomeController());
-
   int count = 0;
   payment choose = payment.ApplePay;
 
@@ -32,6 +31,8 @@ class _payState extends State<pay> {
 
   @override
   Widget build(BuildContext context) {
+    int price = 100;
+    var total = price * count;
     return Scaffold(
       body: ListView(children: [
         Column(
@@ -175,16 +176,18 @@ class _payState extends State<pay> {
                   Container(
                     child: Row(
                       children: [
-                        FutureBuilder(
-                          future: homeController.itme.get(),
-                          builder: (context, snapshot) {
-                            if (snapshot.connectionState ==
-                                ConnectionState.waiting) {
-                              return CircularProgressIndicator();
-                            }
-                            return Text("${snapshot.data?.docs[0]['price']}");
-                          },
-                        ),
+                        // FutureBuilder(
+                        //   future: homeController.itme.get(),
+                        //   builder: (context, snapshot) {
+                        //     if (snapshot.connectionState ==
+                        //         ConnectionState.waiting) {
+                        //       return CircularProgressIndicator();
+                        //     }
+
+                        //     return Text("${snapshot.data?.docs[0]['price']}");
+                        //   },
+                        // ),
+                        Text("$total"),
                         Text(" SR"),
                       ],
                     ),
