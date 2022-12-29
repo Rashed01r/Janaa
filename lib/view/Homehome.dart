@@ -15,9 +15,17 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
+
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
   Geloctor geloctor = Get.put(Geloctor());
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    geloctor.getoPstion();
+    geloctor.listofeventes();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +45,6 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
-       
                 Icon(Icons.place),
                 Text("${box.read("city")}",
                     style: TextStyle(
@@ -47,7 +54,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 5,
           ),
           Stack(
             children: [
@@ -55,7 +62,7 @@ class _HomeState extends State<Home> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 5 - 10,
+                    height: MediaQuery.of(context).size.height / 5 - 8,
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Image.asset(

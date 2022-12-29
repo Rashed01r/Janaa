@@ -17,7 +17,7 @@ class _ActivityPageState extends State<ActivityPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(right: 1),
+          padding: const EdgeInsets.only(right: 26,left: 26),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

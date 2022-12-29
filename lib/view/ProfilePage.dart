@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
+import '../compenent/EditeLANG.dart';
 import '../compenent/SettingsMenu.dart';
 import '../compenent/userDataInfo.dart';
 
@@ -121,10 +122,15 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: 'images/my_book.jpg',
                   title: 'حجوزاتي',
                 ),
-                SettingsMenu(
-                  function: () {},
-                  icon: 'images/language.jpg',
-                  title: 'اللغة',
+                InkWell(
+                  onTap: () {
+                    Get.to(ChangeLAng()); 
+                  },
+                  child: SettingsMenu(
+                    function: () {},
+                    icon: 'images/language.jpg',
+                    title: 'اللغة',
+                  ),
                 ),
                 SettingsMenu(
                   function: () {},

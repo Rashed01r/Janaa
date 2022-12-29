@@ -29,7 +29,7 @@ class Closetoyou extends StatelessWidget {
                     }
                     return Container(
                       width: (MediaQuery.of(context).size.width / 3) + 60,
-                      height: (MediaQuery.of(context).size.height / 2) - 110,
+                      height: (MediaQuery.of(context).size.height / 2) - 90,
                       child: InkWell(
                         onTap: (() {
                           Get.to(() => FutureBuilder(
@@ -111,7 +111,7 @@ class Closetoyou extends StatelessWidget {
                     ))),
                 child: Container(
                   width: (MediaQuery.of(context).size.width / 3) + 60,
-                  height: (MediaQuery.of(context).size.height / 2) - 130,
+                  height: (MediaQuery.of(context).size.height / 2) - 90,
                   child: MyCard(
                     imagepath: "images/قدوتي.png",
                     NameAr: "قدوتي",
@@ -154,7 +154,7 @@ class Closetoyou extends StatelessWidget {
                       ))),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/زيزو.png",
                       NameAr: "عالم زيزو",
@@ -189,7 +189,7 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/مخيم شتوي.png",
                       NameAr: " مخيم شتوي",
@@ -238,7 +238,7 @@ class Closetoyou extends StatelessWidget {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(8)),
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/قضاء الاجازة.png",
                       NameAr: " قضاء الاجازة",
@@ -274,7 +274,7 @@ class Closetoyou extends StatelessWidget {
                       )),
                   child: Container(
                     width: (MediaQuery.of(context).size.width / 3) + 60,
-                    height: (MediaQuery.of(context).size.height / 2) - 130,
+                    height: (MediaQuery.of(context).size.height / 2) - 90,
                     child: MyCard(
                       imagepath: "images/نشطة رياضية.png",
                       NameAr: "أنشطة رياضية",

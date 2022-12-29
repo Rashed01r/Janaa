@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class LangControler extends GetxController {
    Locale initlang =
- sharepref!.getString("LA") == "ar" ? Locale("ar") : Locale("en"); 
+ sharepref!.getString("LA") == "ar" ? Locale("en") : Locale("ar"); 
 
   langVhange(String LA) {
    

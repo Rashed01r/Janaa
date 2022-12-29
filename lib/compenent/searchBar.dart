@@ -13,7 +13,7 @@ class SearchBar extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 0, right: 0),
           child: Container(
             width: 300,
             height: 29,
@@ -21,7 +21,7 @@ class SearchBar extends StatelessWidget {
               decoration: InputDecoration(
                 // change hint hare
                 hintText: '21'.tr,
-                contentPadding: EdgeInsets.all(1),
+                contentPadding: EdgeInsets.all(0),
                 filled: true,
                 fillColor: Color(0xffECF0F1),
                 prefixIcon: Icon(Icons.search),
@@ -34,7 +34,7 @@ class SearchBar extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 8,
+          width: 5,
         ),
         InkWell(
           onTap: () {

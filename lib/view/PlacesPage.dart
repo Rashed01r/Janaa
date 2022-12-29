@@ -16,7 +16,7 @@ class PlacesPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: ListView(
         children: [
             SizedBox(
