@@ -26,6 +26,7 @@ class TextFiledPass extends StatelessWidget {
         child: Form(
           key: formKey,
           child: TextFormField(
+              obscureText: true,
               validator: (text) {
                 if (text == null || text.isEmpty) {
                   return "Text is password";

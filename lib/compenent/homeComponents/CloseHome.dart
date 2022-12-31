@@ -1,3 +1,4 @@
+import 'package:final_project/controller/ProfilePageController.dart';
 import 'package:final_project/controller/gelcotor.dart';
 import 'package:final_project/controller/home_controller.dart';
 import 'package:final_project/main.dart';
@@ -7,10 +8,25 @@ import 'package:get/get.dart';
 import '../../view/Eventdetails.dart';
 import 'HomeCard1.dart';
 
-class Closetoyou extends StatelessWidget {
+class Closetoyou extends StatefulWidget {
   Closetoyou({super.key});
+
+  @override
+  State<Closetoyou> createState() => _ClosetoyouState();
+}
+
+class _ClosetoyouState extends State<Closetoyou> {
   Geloctor geloctor = Geloctor();
+
   HomeController homeController = Get.put(HomeController());
+  ProfilePageController pageController = Get.put(ProfilePageController());
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //homeController.setItem();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -37,8 +53,7 @@ class Closetoyou extends StatelessWidget {
                                 builder: (context, snapshot) {
                                   if (snapshot.hasData) {
                                     return EventDetails(
-                                        image:
-                                            "${snapshot.data?.docs[0]['image']}",
+                                        image: "images/سبتات للفتيات.jpeg",
                                         year: snapshot.data?.docs[0]['year'],
                                         month: snapshot.data?.docs[0]['month'],
                                         day: snapshot.data?.docs[0]['day'],
@@ -79,7 +94,7 @@ class Closetoyou extends StatelessWidget {
                               ));
                         }),
                         child: MyCard(
-                          imagepath: "${snapshot.data?.docs[0]['imagepath']}",
+                          imagepath: "images/سبتات للفتيات.jpeg",
                           NameAr: "${snapshot.data?.docs[0]['NameAr']}",
                           NameEN: "${snapshot.data?.docs[0]['NameEN']}",
                           destance: snapshot.data?.docs[0]['destance'],

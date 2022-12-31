@@ -1,3 +1,4 @@
+import 'package:final_project/main.dart';
 import 'package:final_project/view/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -41,7 +42,7 @@ class BottomSheetCustome extends StatelessWidget {
                                 color: Color(0xff1F61C3)),
                             child: TextButton(
                                 onPressed: () {
-                                  Get.to(SingUp());
+                                  Get.to(() => SingUp());
                                 },
                                 child: Text(
                                   '2'.tr,

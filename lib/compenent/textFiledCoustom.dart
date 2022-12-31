@@ -29,7 +29,6 @@ class TextFiledCustome extends StatelessWidget {
                   return "Text is empty";
                 }
                 return null;
-                
               },
               controller: controller,
               textAlign: TextAlign.left,

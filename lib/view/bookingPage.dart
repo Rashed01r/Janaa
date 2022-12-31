@@ -25,7 +25,7 @@ class _payState extends State<pay> {
 
   void decrementCount() {
     setState(() {
-      count--;
+      count <= 0 ? count = 0 : count--;
     });
   }
 
@@ -129,21 +129,12 @@ class _payState extends State<pay> {
                   Container(
                     child: Row(
                       children: [
-                        FutureBuilder(
-                          future: homeController.itme.get(),
-                          builder: (context, snapshot) {
-                            if (snapshot.connectionState ==
-                                ConnectionState.waiting) {
-                              return CircularProgressIndicator();
-                            }
-                            return Text(
-                              "${snapshot.data?.docs[0]['oldPrice']}",
-                              style: TextStyle(
-                                  decoration: TextDecoration.lineThrough,
-                                  color: Color(0xff929090),
-                                  fontSize: 10),
-                            );
-                          },
+                        Text(
+                          "400",
+                          style: TextStyle(
+                              decoration: TextDecoration.lineThrough,
+                              color: Color(0xff929090),
+                              fontSize: 10),
                         ),
                         SizedBox(
                           width: 10,
