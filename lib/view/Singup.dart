@@ -9,19 +9,30 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class SingUp extends StatelessWidget {
+class SingUp extends StatefulWidget {
   SingUp({
     super.key,
   });
 
+  @override
+  State<SingUp> createState() => _SingUpState();
+}
+
+class _SingUpState extends State<SingUp> {
   SingUpController singUpController = Get.put(SingUpController());
+
   Geloctor geloctor = Geloctor();
 
   final _email = GlobalKey<FormState>();
+
   final _pass = GlobalKey<FormState>();
+
   final _FirstName = GlobalKey<FormState>();
+
   final _LastName = GlobalKey<FormState>();
+
   final _ReenterPassword = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

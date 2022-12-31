@@ -1,7 +1,7 @@
 import 'package:final_project/controller/ProfilePageController.dart';
+import 'package:final_project/controller/SingupControler.dart';
 import 'package:final_project/main.dart';
 import 'package:final_project/view/LoginPage.dart';
-import 'package:final_project/view/editeprofile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,7 +24,6 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    //_pageController.getInfoUser();
   }
 
   @override
@@ -49,30 +48,36 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 18,
                 ),
                 FutureBuilder(
-                  future: _pageController.users.get(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasData) {
-                      return InkWell(
-                        onTap: () async {
-                          await FirebaseAuth.instance.signOut();
+                    future: _pageController.users.get(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return InkWell(
+                          onTap: () async {
+                            await FirebaseAuth.instance.signOut();
 
-                          Get.offAll(() => LoginPage());
-                        },
-                        child: UserDataInfo(
-                          name: "${snapshot.data?.docs[0]['First_Name']}",
-                          phone: "${snapshot.data?.docs[0]['Email']}",
-                        ),
-                      );
-                    }
-                    if (snapshot.hasData == null) {
-                      return UserDataInfo(
-                        name: "",
-                        phone: "",
-                      );
-                    }
-                    return CircularProgressIndicator();
-                  },
-                ),
+                            Get.offAll(() => LoginPage());
+                          },
+                          child: UserDataInfo(
+                            name: "${snapshot.data?.docs[0]['First_Name']}",
+                            phone: "${snapshot.data?.docs[0]['Email']}",
+                          ),
+                        );
+                      }
+                      if (snapshot.data == null) {
+                        return InkWell(
+                          onTap: () async {
+                            await FirebaseAuth.instance.signOut();
+
+                            Get.offAll(() => LoginPage());
+                          },
+                          child: UserDataInfo(
+                            name: "",
+                            phone: "",
+                          ),
+                        );
+                      }
+                      return CircularProgressIndicator();
+                    }),
                 SizedBox(
                   height: 8,
                 ),

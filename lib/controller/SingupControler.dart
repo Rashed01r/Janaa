@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:final_project/main.dart';
 import 'package:final_project/view/LoginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -10,9 +11,9 @@ class SingUpController extends GetxController {
   final FnameCon = TextEditingController();
   final LNameCon = TextEditingController();
   final RpassCon = TextEditingController();
+  final uid = FirebaseAuth.instance.currentUser?.uid;
 
   Future signUp() async {
-    final uid = await FirebaseAuth.instance.currentUser?.uid;
     var fireStore = await FirebaseFirestore.instance;
 
     try {
@@ -28,6 +29,7 @@ class SingUpController extends GetxController {
         "Password": "${passCon.text}",
         "Re-Password": "${RpassCon.text}",
       });
+
       Get.to(() => LoginPage());
       Get.snackbar("Sign Up", "successfully registered");
     } on FirebaseAuthException catch (e) {
@@ -36,8 +38,18 @@ class SingUpController extends GetxController {
       } else if (e.code == 'email-already-in-use') {
         Get.snackbar("ُEmail", "The account already exists for that email.");
       }
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    emailCon.dispose();
+    passCon.dispose();
+    LNameCon.dispose();
+    FnameCon.dispose();
+    RpassCon.dispose();
+    print("close");
   }
 }

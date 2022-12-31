@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:final_project/compenent/ButtomNav.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -19,5 +21,13 @@ class LoginController extends GetxController {
         Get.snackbar("Password", "Wrong password provided for that user.");
       }
     }
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    emailCon.dispose();
+    passCon.dispose();
   }
 }

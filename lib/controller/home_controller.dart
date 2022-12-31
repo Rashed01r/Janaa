@@ -3,15 +3,16 @@ import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 
 class HomeController extends GetxController {
-  var fireStore = FirebaseFirestore.instance.collection("Items");
+  CollectionReference fireStore =
+      FirebaseFirestore.instance.collection("Items");
   CollectionReference itme = FirebaseFirestore.instance.collection("Items");
   CollectionReference itmeDetalis =
       FirebaseFirestore.instance.collection("ItemsDetalis");
 
   Future setItem() async {
-    var r = fireStore.doc().set({
-      "imagepath": "images/سبتات للفتيات.png",
-      //"NameAr": " فعالية سبتات للفتيات",
+    fireStore.doc().set({
+      //"imagepath": "images/سبتات للفتيات.png",
+      "NameAr": " فعالية سبتات للفتيات",
       "NameEN": "Saturdays event for girls",
       "destance": 50,
       "price": 20,
@@ -22,7 +23,7 @@ class HomeController extends GetxController {
       "year": 2022,
       "month": 6,
       "day": 17,
-     // "image": "images/سبتات للفتيات.png",
+      // "image": "images/سبتات للفتيات.png",
       "nameCompany": "قدوة للتدريب",
       "nameActivity": "فعالية سبتات للفتيات",
       "activityDetails":
