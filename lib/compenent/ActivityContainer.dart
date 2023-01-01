@@ -54,7 +54,7 @@ class _CustomContainerState extends State<CustomContainer> {
                   Row(
                     children: [
                       Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.only(top:120.0 ,right: 10),
                           child: Container(
                             child: LikeButton(),
                           )),

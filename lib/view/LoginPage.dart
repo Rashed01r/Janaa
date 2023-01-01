@@ -33,11 +33,21 @@ class LoginPage extends StatelessWidget {
           color: Colors.black, //change your color here
         ),
       ),
-      body: SafeArea(
+      body: SafeArea( 
+
+
+      
           child: ListView(
+
+
+            
         children: [
+
+
+Center(child: Container(child: Image.asset("images/WhatsApp Image 2022-12-31 at 3.40.21 PM.jpeg"),),), 
+
           SizedBox(
-            height: 150,
+            height: 50,
           ),
           TextFiledCustome(
               formKey: _email,
