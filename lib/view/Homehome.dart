@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 140),
             child: Row(
               children: [
-                Icon(Icons.place),
+                //Icon(Icons.place),
                 Text("${box.read("city")}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     Container(
-                        height: MediaQuery.of(context).size.height / 2.1,
+                        height: MediaQuery.of(context).size.height / 1.9,
                         decoration: BoxDecoration(
                             color: Color.fromARGB(0, 0, 0, 0),
                             border: Border(

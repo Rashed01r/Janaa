@@ -1,3 +1,5 @@
+import 'package:final_project/main.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,13 +19,15 @@ class _UserDataInfoState extends State<UserDataInfo> {
     return Row(
       children: [
         InkWell(
-          onTap: () {},
-          child: Image.asset(
-            "images/edit.jpg",
-            width: 24,
-            height: 24,
-          ),
-        ),
+            onTap: () async {
+              await FirebaseAuth.instance.signOut();
+
+              // Get.offAll(() => LoginPage());
+              box.remove('First_Name');
+              box.remove('email');
+              print("done");
+            },
+            child: Icon(Icons.logout)),
         Spacer(
           flex: 1,
         ),

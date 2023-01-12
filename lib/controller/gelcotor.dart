@@ -1,4 +1,3 @@
-
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:geolocator/geolocator.dart';
@@ -38,7 +37,7 @@ class Geloctor extends GetxController {
     List<Placemark> plac = await placemarkFromCoordinates(24.653009, 46.726095);
 
     print("${plac[0].administrativeArea}");
-    box.write("city", "${plac[0].administrativeArea}"); 
+    box.write("city", "${plac[0].administrativeArea}");
   }
 
   @override

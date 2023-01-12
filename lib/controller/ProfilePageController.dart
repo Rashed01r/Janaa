@@ -6,19 +6,21 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class ProfilePageController extends GetxController {
-   var users = FirebaseFirestore.instance.collection("Users");
-   
-  // void getInfoUser() async {
-  //   var uid = await FirebaseAuth.instance.currentUser?.uid;
-  //   FirebaseFirestore firestore = FirebaseFirestore.instance;
-  //   print("here");
-  //   var userInfo = await firestore.collection("Users").doc(uid).get();
+  SingUpController singUpController = Get.put(SingUpController());
+  //var users = FirebaseFirestore.instance.collection("Users");
 
-  //   box.write('First_Name', userInfo["First_Name"]);
-  //   print(box.read('First_Name'));
-  //   box.write('email', userInfo["Email"]);
-  //   print(box.read('email'));
+  void getInfoUser() async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    print("here");
+    var userInfo =
+        await firestore.collection("Users").doc(singUpController.uid).get();
 
-  //   print("=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+");
-  // }
+    box.write('First_Name', userInfo["First_Name"]);
+    print(box.read('First_Name'));
+    box.write('email', userInfo["Email"]);
+    print(box.read('email'));
+
+    print(singUpController.uid);
+    print("=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+");
+  }
 }
