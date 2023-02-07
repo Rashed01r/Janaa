@@ -19,7 +19,6 @@ class _ClosetoyouState extends State<Closetoyou> {
   Geloctor geloctor = Geloctor();
 
   HomeController homeController = Get.put(HomeController());
-  ProfilePageController pageController = Get.put(ProfilePageController());
   @override
   void initState() {
     // TODO: implement initState

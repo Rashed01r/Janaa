@@ -1,5 +1,7 @@
 import 'package:final_project/compenent/ButtomNav.dart';
+import 'package:final_project/compenent/passLogin.dart';
 import 'package:final_project/compenent/textFiledCoustom.dart';
+import 'package:final_project/compenent/textFiledPass.dart';
 import 'package:final_project/controller/ProfilePageController.dart';
 import 'package:final_project/controller/SingupControler.dart';
 import 'package:final_project/controller/loginController.dart';
@@ -56,7 +58,7 @@ Center(child: Container(child: Image.asset("images/WhatsApp Image 2022-12-31 at 
           SizedBox(
             height: 25,
           ),
-          TextFiledCustome(
+          TextFiledPassLogin(
             hint: "7".tr,
             formKey: _pass,
             controller: loginController.passCon,

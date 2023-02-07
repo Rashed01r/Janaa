@@ -24,6 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    _pageController.getInfoUser();
   }
 
   @override
@@ -48,36 +49,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 18,
                 ),
                 FutureBuilder(
-                    future: _pageController.users.get(),
-                    builder: (context, snapshot) {
-                      if (snapshot.hasData) {
-                        return InkWell(
-                          onTap: () async {
-                            await FirebaseAuth.instance.signOut();
-
-                            Get.offAll(() => LoginPage());
-                          },
-                          child: UserDataInfo(
-                            name: "${snapshot.data?.docs[0]['First_Name']}",
-                            phone: "${snapshot.data?.docs[0]['Email']}",
-                          ),
-                        );
-                      }
-                      if (snapshot.data == null) {
-                        return InkWell(
-                          onTap: () async {
-                            await FirebaseAuth.instance.signOut();
-
-                            Get.offAll(() => LoginPage());
-                          },
-                          child: UserDataInfo(
-                            name: "",
-                            phone: "",
-                          ),
-                        );
-                      }
-                      return CircularProgressIndicator();
-                    }),
+                  future: _pageController.users.get(),
+                  builder: (context, snapshot) {
+                    return UserDataInfo(
+                      name: "${_pageController.name}",
+                      phone: "${_pageController.email}",
+                    );
+                  },
+                ),
                 SizedBox(
                   height: 8,
                 ),
@@ -167,3 +146,39 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 }
+
+
+//  FutureBuilder(
+//                     future: _pageController.users.get(),
+//                     builder: (context, snapshot) {
+//                       if (snapshot.hasData) {
+//                         return InkWell(
+//                           onTap: () async {
+//                             await FirebaseAuth.instance.signOut();
+
+//                             // Get.offAll(() => LoginPage());
+//                             box.remove('First_Name');
+//                             box.remove('email');
+//                             print("done");
+//                           },
+//                           child: UserDataInfo(
+//                             name: "${box.read('First_Name')}",
+//                             phone: "${box.read('email')}",
+//                           ),
+//                         );
+//                       }
+//                       if (snapshot.data == null) {
+//                         return InkWell(
+//                           onTap: () async {
+//                             // await FirebaseAuth.instance.signOut();
+
+//                             // Get.offAll(() => LoginPage());
+//                           },
+//                           child: UserDataInfo(
+//                             name: "",
+//                             phone: "",
+//                           ),
+//                         );
+//                       }
+//                       return CircularProgressIndicator();
+//                     }),

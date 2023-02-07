@@ -27,7 +27,7 @@ class MyCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
           width: 200,
-          height: (MediaQuery.of(context).size.height / 3) + 5,
+          height: (MediaQuery.of(context).size.height / 4) + 60.5,
           child: Card(
             shape: RoundedRectangleBorder(
               side: BorderSide(

@@ -54,7 +54,7 @@ class EventDetails extends StatelessWidget {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
               child: Column(
                 children: [
                   Stack(
@@ -99,11 +99,13 @@ class EventDetails extends StatelessWidget {
                     ),
                     child: Text(
                       "$nameActivity",
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 10, left: 10, top: 10),
+                    padding:
+                        const EdgeInsets.only(right: 10, left: 10, top: 10),
                     child: Text(
                       "$activityDetails",
                       style: TextStyle(fontSize: 15),
@@ -138,7 +140,8 @@ class EventDetails extends StatelessWidget {
                                 child: Text(
                                   "57".tr,
                                   style: TextStyle(
-                                      fontSize: 16, fontWeight: FontWeight.bold),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Padding(
@@ -163,7 +166,8 @@ class EventDetails extends StatelessWidget {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top: 10, right: 10),
+                              padding:
+                                  const EdgeInsets.only(top: 10, right: 10),
                               child: Text(
                                 "59".tr,
                                 style: TextStyle(
@@ -171,7 +175,8 @@ class EventDetails extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 10, right: 10),
+                              padding:
+                                  const EdgeInsets.only(top: 10, right: 10),
                               child: Text(
                                 "$timeActivity",
                                 style: TextStyle(
@@ -252,7 +257,7 @@ class EventDetails extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment:MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         IconButton(
                             onPressed: () {
@@ -311,10 +316,12 @@ class EventDetails extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 8,),
+                      SizedBox(
+                        width: 8,
+                      ),
                       InkWell(
                         onTap: () {
-                          Get.to(pay());
+                          Get.to(() => Pay());
                         },
                         child: Container(
                             height: 50,
@@ -341,7 +348,9 @@ class EventDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                 ],
               ),
             ),
