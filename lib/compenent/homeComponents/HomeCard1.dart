@@ -56,11 +56,11 @@ class MyCard extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20)),
                             width: 200,
                             height:
-                                (MediaQuery.of(context).size.height / 3) - 15,
+                                (MediaQuery.of(context).size.height / 3) ,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 172),
+                          padding: const EdgeInsets.only(top: 188),
                           child: Container(
                             padding: EdgeInsets.symmetric(horizontal: 8),
                             decoration: BoxDecoration(
@@ -146,7 +146,7 @@ class MyCard extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 100.0),
+                          padding: const EdgeInsets.only(left: 130.0,top:189),
                           child: LikeButton(),
                         ),
                       ],

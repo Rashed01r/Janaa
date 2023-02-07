@@ -91,12 +91,12 @@ class _HomeState extends State<Home> {
                           child: Text(
                         "73".tr,
                         style: TextStyle(
-                          color: Color(0xffFFFFFF),
+                          color: Color.fromARGB(255, 44, 39, 39),
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           shadows: <Shadow>[
                             Shadow(
-                              offset: Offset(2.0, 2.0),
+                              offset: Offset(0, 1.0),
                               blurRadius: 3.0,
                               color: Color.fromARGB(255, 16, 16, 16),
                             ),
@@ -132,8 +132,8 @@ class _HomeState extends State<Home> {
                         Tab(text: '76'.tr),
                       ],
                     ),
-                    Container(
-                        height: MediaQuery.of(context).size.height / 2 +20,
+                    Containe(
+                        height: MediaQuery.of(context).size.height / 2+20,
                         decoration: BoxDecoration(
                             color: Color.fromARGB(0, 0, 0, 0),
                             border: Border(
