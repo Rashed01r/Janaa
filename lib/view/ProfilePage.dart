@@ -48,9 +48,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 18,
                 ),
-                UserDataInfo(
-                  name: "${box.read('First_Name')}",
-                  phone: "${box.read('email')}",
+                FutureBuilder(
+                  future: _pageController.users.get(),
+                  builder: (context, snapshot) {
+                    return UserDataInfo(
+                      name: "${_pageController.name}",
+                      phone: "${_pageController.email}",
+                    );
+                  },
                 ),
                 SizedBox(
                   height: 8,

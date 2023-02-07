@@ -12,7 +12,7 @@ class ReSentPassController extends GetxController {
           .sendPasswordResetEmail(email: emailCon.text.trim());
 
       print(emailCon.text);
-      Get.defaultDialog(content: Text("Done"));
+      Get.defaultDialog(content: Text("Done"), title: "Resent password");
     } on FirebaseException catch (e) {
       print("error pass");
     }

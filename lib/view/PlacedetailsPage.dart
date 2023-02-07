@@ -79,17 +79,18 @@ class Placedetails extends StatelessWidget {
                   height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:8.0,right: 8),
+                  padding: const EdgeInsets.only(left: 8.0, right: 8),
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: Text(
                       "$nameActivity",
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:8.0,right: 8),
+                  padding: const EdgeInsets.only(left: 8.0, right: 8),
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: Text(
@@ -257,12 +258,14 @@ class Placedetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 8,),
+                    SizedBox(
+                      width: 8,
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: InkWell(
                         onTap: () {
-                          Get.to(() => pay());
+                          Get.to(() => Pay());
                         },
                         child: Container(
                             height: 50,
@@ -290,7 +293,9 @@ class Placedetails extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 12,),
+                SizedBox(
+                  height: 12,
+                ),
               ],
             ),
           ],

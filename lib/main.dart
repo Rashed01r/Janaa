@@ -14,6 +14,7 @@ import 'controller/langcontrol.dart';
 final box = GetStorage();
 
 SharedPreferences? sharepref;
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();

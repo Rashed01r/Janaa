@@ -5,14 +5,14 @@ import 'package:get/get.dart';
 
 enum payment { ApplePay, STCpay, MadaCard }
 
-class pay extends StatefulWidget {
-  const pay({super.key});
+class Pay extends StatefulWidget {
+  const Pay({super.key});
 
   @override
-  State<pay> createState() => _payState();
+  State<Pay> createState() => _payState();
 }
 
-class _payState extends State<pay> {
+class _payState extends State<Pay> {
   HomeController homeController = Get.put(HomeController());
   int count = 0;
   payment choose = payment.ApplePay;
@@ -164,24 +164,22 @@ class _payState extends State<pay> {
                     "65".tr,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        // FutureBuilder(
-                        //   future: homeController.itme.get(),
-                        //   builder: (context, snapshot) {
-                        //     if (snapshot.connectionState ==
-                        //         ConnectionState.waiting) {
-                        //       return CircularProgressIndicator();
-                        //     }
+                  Row(
+                    children: [
+                      // FutureBuilder(
+                      //   future: homeController.itme.get(),
+                      //   builder: (context, snapshot) {
+                      //     if (snapshot.connectionState ==
+                      //         ConnectionState.waiting) {
+                      //       return CircularProgressIndicator();
+                      //     }
 
-                        //     return Text("${snapshot.data?.docs[0]['price']}");
-                        //   },
-                        // ),
-                        Text("$total"),
-                        Text(" SR"),
-                      ],
-                    ),
+                      //     return Text("${snapshot.data?.docs[0]['price']}");
+                      //   },
+                      // ),
+                      Text("$total"),
+                      Text(" SR"),
+                    ],
                   ),
                 ],
               ),

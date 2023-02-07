@@ -1,6 +1,7 @@
 import 'package:final_project/compenent/homeComponents/CloseHome.dart';
 import 'package:final_project/compenent/homeComponents/NewHome.dart';
 import 'package:final_project/compenent/homeComponents/upcoming.dart';
+import 'package:final_project/controller/ProfilePageController.dart';
 import 'package:final_project/controller/home_controller.dart';
 import 'package:final_project/main.dart';
 
@@ -18,6 +19,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   HomeController homeController = Get.put(HomeController());
+  ProfilePageController pageController = Get.put(ProfilePageController());
+
   Geloctor geloctor = Get.put(Geloctor());
   @override
   void initState() {
@@ -25,6 +28,7 @@ class _HomeState extends State<Home> {
     super.initState();
     geloctor.getoPstion();
     geloctor.listofeventes();
+    pageController.getInfoUser();
   }
 
   @override
@@ -129,7 +133,7 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     Container(
-                        height: MediaQuery.of(context).size.height / 1.9,
+                        height: Get.height / 1.85,
                         decoration: BoxDecoration(
                             color: Color.fromARGB(0, 0, 0, 0),
                             border: Border(
