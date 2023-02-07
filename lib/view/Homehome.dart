@@ -134,7 +134,7 @@ class _HomeState extends State<Home> {
                     ),
                     Container(
 
-                        height: MediaQuery.of(context).size.height / 2 +20,
+                        height: MediaQuery.of(context).size.height / 2 + 20,
                         
                         decoration: BoxDecoration(
                             color: Color.fromARGB(0, 0, 0, 0),
